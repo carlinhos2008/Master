@@ -1,0 +1,11 @@
+[Protocol]
+exec=masterstake-qt '%u'
+protocol=masterstake
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

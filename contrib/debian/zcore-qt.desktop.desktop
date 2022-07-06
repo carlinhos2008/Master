@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=MasterStake
+Comment=MasterStake P2P Cryptocurrency
+Exec=masterstake-qt %u
+Terminal=false
+Type=Application
+Icon=masterstake128
+MimeType=x-scheme-handler/masterstake;
+Categories=Office;Finance;
+Name[en_US]=masterstake-qt.desktop
