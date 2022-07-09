@@ -39,8 +39,8 @@
 *  https://bitcoingarden.org/forum/index.php?topic=96439
 *  https://discord.gg/34cfpAbc6M
 *  https://coinpaprika.com/criptomoeda/msc-miner-stake-coin/
-*  Explorer - https://explorer.masterstake.online/
-*  https://masterstake.online/
+*  Explorer - http://191.252.204.129/
+*  https://masterstake.net/
 
 Donations
 -------
