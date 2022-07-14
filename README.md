@@ -15,9 +15,9 @@
   *  Algorithm: Quark
   *  Colateral: 15000 Coins
   *  Block Reward: 3 ~ 50 Coins
-  *  Reward Masternode: 80% 
-  *  Reward POS - 20%
-  *  Reward Dev Fee: 0.50 Coins
+  *  Reward Masternode: 75% ~ 90% 
+  *  Reward POS - 10% ~ 25%
+  *  Reward Dev Fee: 0.50 ~ 10 Coins
   *  Port: 49266
   *  rpcPort: 49265
   *  Blocks Rewards 
