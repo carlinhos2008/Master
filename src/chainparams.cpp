@@ -158,12 +158,12 @@ public:
         assert(hashGenesisBlock == uint256("0x0000f00ba769187169bc7e9b4fd82c73ce31d355c35915a5d999ef55d3c903fb"));
         assert(genesis.hashMerkleRoot == uint256("0x318407c1baff76f6dcaa61de5525f99d8920b6b3dca2b290c68b2f1cb6726cc1"));
 
-        vSeeds.push_back(CDNSSeedData("seed1.masterstake.online", "seed1.masterstake.online"));
-        vSeeds.push_back(CDNSSeedData("seed2.masterstake.online", "seed2.masterstake.online"));
-        vSeeds.push_back(CDNSSeedData("seed3.masterstake.online", "seed3.masterstake.online"));
-        vSeeds.push_back(CDNSSeedData("seed4.masterstake.online", "seed4.masterstake.online"));
-        vSeeds.push_back(CDNSSeedData("seed5.masterstake.online", "seed5.masterstake.online"));
-        vSeeds.push_back(CDNSSeedData("seed6.masterstake.online", "seed6.masterstake.online"));
+        vSeeds.push_back(CDNSSeedData("seed1.masterstake.net", "seed1.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed2.masterstake.net", "seed2.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed3.masterstake.net", "seed3.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed4.masterstake.net", "seed4.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed5.masterstake.net", "seed5.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed6.masterstake.net", "seed6.masterstake.net"));
         vSeeds.push_back(CDNSSeedData("186.202.57.186", "186.202.57.186"));
         vSeeds.push_back(CDNSSeedData("191.252.109.144", "191.252.109.144"));
         vSeeds.push_back(CDNSSeedData("191.252.204.129", "191.252.204.129"));

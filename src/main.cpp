@@ -1841,10 +1841,18 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, bool isZMASTERStak
     int64_t nMNSubsidy;
     if(nHeight < Params().LAST_POW_BLOCK()){
         nMNSubsidy = COIN * 0;
-    } else if (nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 524999){
+    } else if (nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 170999){
         nMNSubsidy = blockValue *  0.80;
+    } else if ( nHeight >= 171000 && nHeight <= 174999) {
+        nMNSubsidy = blockValue *  0.90;
+    } else if ( nHeight >= 175000 && nHeight <= 347999) {
+        nMNSubsidy = blockValue *  0.75;   
+    } else if ( nHeight >= 348000 && nHeight <= 349999) {
+        nMNSubsidy = blockValue *  0.90;
+    } else if ( nHeight >= 350000 && nHeight <= 524999) {
+        nMNSubsidy = blockValue *  0.75;
     } else{
-        nMNSubsidy = blockValue *  0.80;
+        nMNSubsidy = blockValue *  0.75;
     }
     return nMNSubsidy;
 }
@@ -1853,11 +1861,23 @@ int64_t GetDevelopersPayment(int nHeight) {
    int64_t nDFSubsidy;
    if (nHeight <  Params().LAST_POW_BLOCK()) {
         nDFSubsidy = COIN * 0;
-    } else if (nHeight >= Params().LAST_POW_BLOCK()) {
-        nDFSubsidy = COIN * 0.5;
-     }
+    } else if (nHeight >= Params().LAST_POW_BLOCK()  && nHeight <= 29999) {
+       nDFSubsidy = COIN * 0.50;
+    } else if ( nHeight >= 30000 && nHeight <= 170999) {
+       nDFSubsidy = COIN * 1.50;
+    } else if ( nHeight >= 171000 && nHeight <= 174999) {
+       nDFSubsidy = COIN * 5.00;
+    } else if ( nHeight >= 175000 && nHeight <= 347999) {
+       nDFSubsidy = COIN * 0.75;
+    } else if ( nHeight >= 348000 && nHeight <= 349999) {
+       nDFSubsidy = COIN * 10.00;
+    } else if ( nHeight >= 350000 && nHeight <= 524999) {
+       nDFSubsidy = COIN * 0.50;               
+    } else {
+       nDFSubsidy = COIN * 0.50;
+    }
     return nDFSubsidy;
-}
+}    
 
 bool IsInitialBlockDownload()
 {
@@ -2815,7 +2835,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
 
     //PoW phase redistributed fees to miner. PoS stage destroys fees.
-    CAmount nExpectedMint = GetBlockValue(pindex->nHeight);
+    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
     if (block.IsProofOfWork())
         nExpectedMint += nFees;
 

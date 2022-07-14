@@ -12,7 +12,7 @@ QStatusBar {
 
 .QFrame {
     background-color: transparent;
-    border: 0px solid #fff;
+    border: 0px solid #f0e68c;
 }
 
 QMenuBar {
@@ -91,7 +91,7 @@ QToolBar > QToolButton#ToolbarSpacer:hover:!selected {
 
 
 QMessageBox {
-    background-color: #fff;
+    background-color: #f0e68c;
 }
 
 QProgressBar {
@@ -136,7 +136,7 @@ QTabBar::tab:hover:!selected {
 
 QWidget {
     selection-background-color:#ffffff; /* Object highlight color */
-    selection-color:#fff;
+    selection-color:#f0e68c;
     outline:0; /* Remove Annoying Focus Rectangle */
 }
 
@@ -292,7 +292,7 @@ QComboBox:checked {
 QComboBox:editable {
     background:#382f44;
     color:#616161;
-    border:0px solid transparent;
+    border:0px #ffd700;
 }
 
 QComboBox::drop-down {
@@ -305,7 +305,7 @@ QComboBox::down-arrow {
 }
 
 QComboBox QListView {
-    background:#fff;
+    background:#f0e68c;
     border:1px solid #333;
     padding-right:1px;
     padding-left:1px;
@@ -321,11 +321,11 @@ QComboBox::item {
 }
 
 QComboBox::item:alternate {
-    background:#fff;
+    background:#f0e68c;
 }
 
 QComboBox::item:selected {
-    border:0px solid transparent;
+    border:0px #ffd700;
     background:#f2f2f2;
 }
 
@@ -408,12 +408,12 @@ QHeaderView { /* Table Header */
 QHeaderView::section { /* Table Header Sections */
     qproperty-alignment:center;
     background-color: #dead00;
-    color:#fff;
+    color:#f0e68c;
     min-height:25px;
     font-weight:bold;
     font-size:11px;
     border:0;
-    border-right:1px solid #fff;
+    border-right:1px solid #f0e68c;
     padding-left:5px;
     padding-right:5px;
     padding-top:2px;
@@ -449,11 +449,11 @@ QTableView::item { /* Table Item */
 
 QTableView::item:selected { /* Table Item Selected */
     background-color:#ffffff;
-    color:#fff;
+    color:#f0e68c;
 }
 
 QTableWidget { /* Table Background */
-    background-color: #fff;
+    background-color: #f0e68c;
     border:1px solid #333;
 }
 
@@ -584,7 +584,7 @@ QSlider::add-page:horizontal {
 }
 
 QSlider::handle:horizontal {
-    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #fff, stop:1 #f8f6f6);
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #f0e68c, stop:1 #f8f6f6);
     border: 1px solid #333;
     width: 18px;
     height: 18px;
@@ -606,10 +606,10 @@ QSlider::handle:horizontal:hover {
 /**************************** DIALOG BOXES **********************************************/
 
 QDialog {
-    background-color: #fff;
+    background-color: #f0e68c;
 }
 AskPassphraseDialog {
-    background-color: #fff;
+    background-color: #f0e68c;
 }
 
 
@@ -645,7 +645,7 @@ QDialog .QTabWidget QTabBar::tab:selected, QDialog .QTabWidget QTabBar::tab:hove
 }
 
 QDialog .QTabWidget .QWidget {
-    background-color:#fff;
+    background-color:#f0e68c;
     color:#333;
 }
 
@@ -895,14 +895,14 @@ QDialog#RPCConsole .QGroupBox #line { /* Network In Line */
 }
 
 QDialog#RPCConsole .QGroupBox #line_2 { /* Network Out Line */
-    background:#fff;
+    background:#f0e68c;
 }
 
 /**************************** HELP MENU *************************************************/
 
 /* Command Line Options Dialog */
 QDialog#HelpMessageDialog QScrollArea * {
-    background-color:#fff;
+    background-color:#f0e68c;
 }
 
 QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScrollBar:horizontal {
@@ -1005,7 +1005,7 @@ QWidget .QFrame#frame_CombinedBalances { /* Lower left side */
 }
 
 QWidget .QFrame#frame_RecentTransactions { /* Right side */
-    background: #fff;
+    background: #f0e68c;
     border-radius: 6px;
 }
 
@@ -1358,7 +1358,7 @@ QDialog#SendCoinsDialog .QFrame#frameFee { /* Coin Control Section */
 }
 
 QDialog#SendCoinsDialog .QFrame#frame_Send { /* Coin Control Section */
-    background-color:#fff;
+    background-color:#f0e68c;
     border-radius: 6px;
     padding: 0px, 15px, 0, 15px;
 }
@@ -1585,12 +1585,12 @@ QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item {
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item:selected { /* Coin Control Item (selected) */
     background-color:#E65F55;
-    color:#fff;
+    color:#f0e68c;
 }
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item:checked { /* Coin Control Item (checked) */
     background-color:#f7f7f7;
-    color:#fff;
+    color:#f0e68c;
 }
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::branch:selected { /* Coin Control Branch Icon */
@@ -1762,7 +1762,7 @@ QCalendarWidget QWidget#qt_calendar_navigationbar { /* Calendar widget navigatio
 
 QCalendarWidget QAbstractItemView { /* Calendar widget days */
     alternate-background-color:#dedbe5;
-    background-color:#fff;
+    background-color:#f0e68c;
 }
 
 QCalendarWidget QAbstractItemView:enabled { /* Calendar widget weekdays in month */
@@ -1778,16 +1778,16 @@ QCalendarWidget QAbstractItemView:disabled { /* Calendar widget days not in mont
 /*****************************************/
 
 QLabel#content{
-    background-color: #fff;
+    background-color: #f0e68c;
     border-radius: 6px;
     padding: 9px;
 
 }
 
 QLabel#transactionSumLabel {
-    color: #fff;
+    color: #f0e68c;
 }
 
 #tableTransactionHistory QTableView{
-    background: #fff;
+    background: #f0e68c;
 }
