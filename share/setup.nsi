@@ -1,34 +1,34 @@
-Name "MasterStake (32-bit)"
+Name "MasterStake (-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 1.0.0
+!define VERSION 2.0.1
 !define COMPANY "MasterStake project"
 !define URL https://www.masterstake.org
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/carlin2008/msc/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/carlin2008/msc/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/root/Coin/coin/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/root/Coin/coin/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/carlin2008/msc/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/root/Coin/coin/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "MasterStake"
-!define MUI_FINISHPAGE_RUN $INSTDIR\masterstake-qt.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\masterstake-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/carlin2008/msc/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/root/Coin/coin/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
 !include Sections.nsh
 !include MUI2.nsh
-!if "32" == "64"
+!if "" == "64"
 !include x64.nsh
 !endif
 
@@ -48,8 +48,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/carlin2008/msc/masterstake-${VERSION}-win32-setup.exe
-!if "32" == "64"
+OutFile /root/Coin/coin/masterstake-${VERSION}-win-setup.exe
+!if "" == "64"
 InstallDir $PROGRAMFILES64\MasterStake
 !else
 InstallDir $PROGRAMFILES\MasterStake
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/carlin2008/msc/release/masterstake-qt.exe
-    File /oname=COPYING.txt /home/carlin2008/msc/COPYING
-    File /oname=readme.txt /home/carlin2008/msc/doc/README_windows.txt
+    File /root/Coin/coin/release/masterstake-qt
+    File /oname=COPYING.txt /root/Coin/coin/COPYING
+    File /oname=readme.txt /root/Coin/coin/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/carlin2008/msc/release/masterstaked.exe
-    File /home/carlin2008/msc/release/masterstake-cli.exe
+    File /root/Coin/coin/release/masterstaked
+    File /root/Coin/coin/release/masterstake-cli
     SetOutPath $INSTDIR\doc
-    File /r /home/carlin2008/msc/doc\*.*
+    File /r /root/Coin/coin/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
@@ -91,8 +91,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\masterstake-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\MasterStake (testnet, 32-bit).lnk" "$INSTDIR\masterstake-qt.exe" "-testnet" "$INSTDIR\masterstake-qt.exe" 1
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\masterstake-qt
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\MasterStake (testnet, -bit).lnk" "$INSTDIR\masterstake-qt" "-testnet" "$INSTDIR\masterstake-qt" 1
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -105,8 +105,8 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
     WriteRegStr HKCR "masterstake" "URL Protocol" ""
     WriteRegStr HKCR "masterstake" "" "URL:MasterStake"
-    WriteRegStr HKCR "masterstake\DefaultIcon" "" $INSTDIR\masterstake-qt.exe
-    WriteRegStr HKCR "masterstake\shell\open\command" "" '"$INSTDIR\masterstake-qt.exe" "%1"'
+    WriteRegStr HKCR "masterstake\DefaultIcon" "" $INSTDIR\masterstake-qt
+    WriteRegStr HKCR "masterstake\shell\open\command" "" '"$INSTDIR\masterstake-qt" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -124,7 +124,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\masterstake-qt.exe
+    Delete /REBOOTOK $INSTDIR\masterstake-qt
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -136,7 +136,7 @@ Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\MasterStake (testnet, 32-bit).lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\MasterStake (testnet, -bit).lnk"
     Delete /REBOOTOK "$SMSTARTUP\MasterStake.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
@@ -158,7 +158,7 @@ SectionEnd
 # Installer functions
 Function .onInit
     InitPluginsDir
-!if "32" == "64"
+!if "" == "64"
     ${If} ${RunningX64}
       ; disable registry redirection (enable access to 64-bit portion of registry)
       SetRegView 64

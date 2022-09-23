@@ -160,14 +160,10 @@ public:
 
         vSeeds.push_back(CDNSSeedData("seed1.masterstake.net", "seed1.masterstake.net"));
         vSeeds.push_back(CDNSSeedData("seed2.masterstake.net", "seed2.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed3.masterstake.net", "seed3.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed4.masterstake.net", "seed4.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed5.masterstake.net", "seed5.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed6.masterstake.net", "seed6.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("186.202.57.186", "186.202.57.186"));
-        vSeeds.push_back(CDNSSeedData("191.252.109.144", "191.252.109.144"));
-        vSeeds.push_back(CDNSSeedData("191.252.204.129", "191.252.204.129"));
-        vSeeds.push_back(CDNSSeedData("191.252.120.128", "191.252.120.128"));
+        vSeeds.push_back(CDNSSeedData("84.54.23.196", "84.54.23.196"));
+        vSeeds.push_back(CDNSSeedData("164.68.123.250", "164.68.123.250"));
+        vSeeds.push_back(CDNSSeedData("167.86.80.59", "167.86.80.59"));
+        vSeeds.push_back(CDNSSeedData("191.252.103.249", "191.252.103.249"));
     
 
         // MasterStake addresses start with 'M'

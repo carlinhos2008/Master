@@ -2,7 +2,6 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2020-2022 The PIVX developers
 // Copyright (c) 2017-2019 The Phore Developers
 // Copyright (c) 2020-2022 The MasterStake developers
 // Distributed under the MIT software license, see the accompanying
@@ -84,13 +83,10 @@ bool fVerifyingBlocks = false;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
-unsigned int nStakeMinAge = 1 * 60 * 60; //1 hours stake age
+unsigned int nStakeMinAge = 1 * 60 * 60;
 int64_t nReserveBalance = 0;
 
-/** Old subversions **/
-std::string version_old;
-
-/** Fees smaller than this (in uzcr) are considered zero fee (for relaying and mining)
+/** Fees smaller than this (in umaster) are considered zero fee (for relaying and mining)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
  */
@@ -1879,6 +1875,7 @@ int64_t GetDevelopersPayment(int nHeight) {
     return nDFSubsidy;
 }    
 
+
 bool IsInitialBlockDownload()
 {
     LOCK(cs_main);
@@ -2835,7 +2832,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
 
     //PoW phase redistributed fees to miner. PoS stage destroys fees.
-    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
+    CAmount nExpectedMint = GetBlockValue(pindex->nHeight);
     if (block.IsProofOfWork())
         nExpectedMint += nFees;
 
@@ -5424,16 +5421,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         pfrom->addrLocal = addrMe;
         if (pfrom->fInbound && addrMe.IsRoutable()) {
             SeenLocal(addrMe);
-        }
-
-        if (pfrom->cleanSubVer == "/MasterStake:2.0.0/" || pfrom->cleanSubVer == "/MasterStake:2.0.1/")
-        {
-            version_old = "< 2.0.2.1";
-            // disconnect from peers older than this version
-            LogPrintf("peer=%d using obsolete version %s disconnecting\n", pfrom->id, pfrom->cleanSubVer);
-            pfrom->PushMessage("reject", strCommand, REJECT_OBSOLETE, strprintf("Version must be %s or greater", version_old));
-            pfrom->fDisconnect = true;
-            return false;
         }
 
         // Be shy and don't send version until we hear
