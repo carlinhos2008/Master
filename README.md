@@ -1,4 +1,4 @@
-# MASTER 1.0
+# MASTER 2.0.1
 -------
 -------
 ### TECHNICAL DATA
@@ -39,9 +39,8 @@
 *  https://bitcoingarden.org/forum/index.php?topic=96439
 *  https://discord.gg/34cfpAbc6M
 *  https://coinpaprika.com/criptomoeda/msc-master-stake-coin/
-*  Explorer1 - http://191.252.103.249/
-*  Explorer2 - http://191.252.103.249:3001/
-*  Explorer3 - http://explorer.masterstake.net/
+*  Nomics - https://nomics.com/assets/master3-masterstakecoin
+*  Explorer - http://explorer.masterstake.net/
 *  https://masterstake.net/
 
 Donations
