@@ -37,7 +37,7 @@
 *  https://twitter.com/master_stake
 *  https://bitcointalk.org/index.php?topic=5293208
 *  https://bitcoingarden.org/forum/index.php?topic=96439
-*  https://discord.gg/34cfpAbc6M
+*  https://discord.gg/CmSMEZQApM
 *  https://coinpaprika.com/criptomoeda/msc-master-stake-coin/
 *  Nomics - https://nomics.com/assets/master3-masterstakecoin
 *  Explorer - http://explorer.masterstake.net/
