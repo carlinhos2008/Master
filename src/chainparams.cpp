@@ -121,10 +121,10 @@ public:
         nMinerThreads = 0;
         nTargetSpacing = 3 * 60;  // MASTER: 3 minutes
         nMaturity = 24;
-        nMaxMoneyOut = 10000000 * COIN;
+        nMaxMoneyOut = 200000000 * COIN;
 
         nSubsidyHalvingBlock = 1000;
-        nMasternodeCollateral = 15000;
+        
         strDevFeeAddress = "MHrThmoWKXH9qqhVTRmnBXtPks7u2xGABe";
 
         /** Height or Time Based Activations **/
@@ -160,10 +160,14 @@ public:
 
         vSeeds.push_back(CDNSSeedData("seed1.masterstake.net", "seed1.masterstake.net"));
         vSeeds.push_back(CDNSSeedData("seed2.masterstake.net", "seed2.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed3.masterstake.net", "seed3.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed4.masterstake.net", "seed4.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed5.masterstake.net", "seed5.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed6.masterstake.net", "seed6.masterstake.net"));
         vSeeds.push_back(CDNSSeedData("84.54.23.196", "84.54.23.196"));
         vSeeds.push_back(CDNSSeedData("164.68.123.250", "164.68.123.250"));
         vSeeds.push_back(CDNSSeedData("167.86.80.59", "167.86.80.59"));
-        vSeeds.push_back(CDNSSeedData("191.252.103.249", "191.252.103.249"));
+        vSeeds.push_back(CDNSSeedData("45.94.209.55", "45.94.209.55"));
     
 
         // MasterStake addresses start with 'M'
@@ -242,7 +246,7 @@ public:
         nBlockZerocoinV2 = 15;
 
         nSubsidyHalvingBlock = 1000;
-        nMasternodeCollateral = 15000;
+        
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1656967050;

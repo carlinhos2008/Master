@@ -1787,6 +1787,25 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex)
     return true;
 }
 
+CAmount GetCurrentCollateral()
+{
+    int blockHeight = chainActive.Height();
+
+    if (blockHeight >  675000) return 1000000 ; /* Fase Reward -  60 Master */
+    if (blockHeight >  600000) return  500000 ; /* Fase Reward -  50 Master */
+    if (blockHeight >  525000) return  425000 ; /* Fase Reward -  75 Master */
+    if (blockHeight >  450000) return  375000 ; /* Fase Reward -  90 Master */
+    if (blockHeight >  375000) return  325000 ; /* Fase Reward - 100 Master */
+    if (blockHeight >  300000) return  275000 ; /* Fase Reward - 100 Master */
+    if (blockHeight >  225000) return  225000 ; /* Fase Reward -  90 Master */
+    if (blockHeight >  150000) return  175000 ; /* Fase Reward -  75 Master */ 
+    if (blockHeight >   70000) return  125000 ; /* Fase Reward -  50 Master */ 
+    if (blockHeight >     200) return   15000 ;  
+
+
+    return 500000 ;
+
+}
 
 double ConvertBitsToDouble(unsigned int nBits)
 {
@@ -1816,18 +1835,28 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = COIN * 3;
     } else if ( nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 29999) {
         nSubsidy = COIN * 3;
-    } else if ( nHeight >= 30000 && nHeight <= 170999) {
+    } else if ( nHeight >= 30000 && nHeight <= 70000) { /* Fase Collateral - 15000 Master */
         nSubsidy = COIN * 9;
-    } else if ( nHeight >= 171000 && nHeight <= 174999) {
-        nSubsidy = COIN * 25;
-    } else if ( nHeight >= 175000 && nHeight <= 347999) {
-        nSubsidy = COIN * 5;
-    } else if ( nHeight >= 348000 && nHeight <= 349999) {
+    } else if ( nHeight >= 70001 && nHeight <= 150000) { /* Fase Collateral - 125000 Master */
         nSubsidy = COIN * 50;
-    } else if ( nHeight >= 350000 && nHeight <= 524999) {
-        nSubsidy = COIN * 3;
+    } else if ( nHeight >= 150001 && nHeight <= 225000) { /* Fase Collateral - 175000 Master */
+        nSubsidy = COIN * 75;
+    } else if ( nHeight >= 225001 && nHeight <= 300000) { /* Fase Collateral - 225000 Master */
+        nSubsidy = COIN * 90;
+    } else if ( nHeight >= 300001 && nHeight <= 375000) { /* Fase Collateral - 275000 Master */
+        nSubsidy = COIN * 100;
+    } else if ( nHeight >= 375001 && nHeight <= 450000) { /* Fase Collateral - 325000 Master */
+        nSubsidy = COIN * 100;
+    } else if ( nHeight >= 450001 && nHeight <= 525000) { /* Fase Collateral - 375000 Master */
+        nSubsidy = COIN * 90;
+    } else if ( nHeight >= 525001 && nHeight <= 600000) { /* Fase Collateral - 425000 Master */
+        nSubsidy = COIN * 75; 
+    } else if ( nHeight >= 600001 && nHeight <= 675000) { /* Fase Collateral - 500000 Master */
+        nSubsidy = COIN * 50;
+    } else if ( nHeight >= 675001 && nHeight <= 5000000) { /* Fase Collateral - 1000000 Master */
+        nSubsidy = COIN * 60;                     
     } else {
-        nSubsidy = COIN * 3;
+        nSubsidy = COIN * 60;
     }
     return nSubsidy;
 }
@@ -1837,18 +1866,12 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, bool isZMASTERStak
     int64_t nMNSubsidy;
     if(nHeight < Params().LAST_POW_BLOCK()){
         nMNSubsidy = COIN * 0;
-    } else if (nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 170999){
+    } else if (nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 65000){
         nMNSubsidy = blockValue *  0.80;
-    } else if ( nHeight >= 171000 && nHeight <= 174999) {
+    } else if ( nHeight >= 65001 && nHeight <= 5000000) {
         nMNSubsidy = blockValue *  0.90;
-    } else if ( nHeight >= 175000 && nHeight <= 347999) {
-        nMNSubsidy = blockValue *  0.75;   
-    } else if ( nHeight >= 348000 && nHeight <= 349999) {
-        nMNSubsidy = blockValue *  0.90;
-    } else if ( nHeight >= 350000 && nHeight <= 524999) {
-        nMNSubsidy = blockValue *  0.75;
     } else{
-        nMNSubsidy = blockValue *  0.75;
+        nMNSubsidy = blockValue *  0.90;
     }
     return nMNSubsidy;
 }
@@ -1859,18 +1882,10 @@ int64_t GetDevelopersPayment(int nHeight) {
         nDFSubsidy = COIN * 0;
     } else if (nHeight >= Params().LAST_POW_BLOCK()  && nHeight <= 29999) {
        nDFSubsidy = COIN * 0.50;
-    } else if ( nHeight >= 30000 && nHeight <= 170999) {
+    } else if ( nHeight >= 30000 && nHeight <= 5000000) {
        nDFSubsidy = COIN * 1.50;
-    } else if ( nHeight >= 171000 && nHeight <= 174999) {
-       nDFSubsidy = COIN * 5.00;
-    } else if ( nHeight >= 175000 && nHeight <= 347999) {
-       nDFSubsidy = COIN * 0.75;
-    } else if ( nHeight >= 348000 && nHeight <= 349999) {
-       nDFSubsidy = COIN * 10.00;
-    } else if ( nHeight >= 350000 && nHeight <= 524999) {
-       nDFSubsidy = COIN * 0.50;               
     } else {
-       nDFSubsidy = COIN * 0.50;
+       nDFSubsidy = COIN * 1.50;
     }
     return nDFSubsidy;
 }    
