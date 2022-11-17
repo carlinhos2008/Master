@@ -7,27 +7,31 @@
 -------
   *  Name: MASTER Stake Coin
   *  Ticker: MASTER
-  *  MAX_MONEY = 10.000.000 Millions
-  *  PRE_MONEY =  2.000.000 Millions
+  *  MAX_MONEY = 200.000.000 Millions
+  *  PRE_MONEY =   2.000.000 Millions
   *  Block time: ~ 3 Minutes
   *  TX maturity: 25 blocks
   *  Masternode Confirmation: 15 blocks
   *  Algorithm: Quark
-  *  Colateral: 15000 Coins
-  *  Block Reward: 3 ~ 50 Coins
-  *  Reward Masternode: 75% ~ 90% 
-  *  Reward POS - 10% ~ 25%
-  *  Reward Dev Fee: 0.50 ~ 10 Coins
+  *  Colateral: 15.000 ~ 600.000 Coins
+  *  Block Reward: 3 ~ 100 Coins
+  *  Reward Masternode: 80% ~ 90% 
+  *  Reward POS - 10% ~ 20%
+  *  Reward Dev Fee: 0.50 ~ 1.50 Coins
   *  Port: 49266
   *  rpcPort: 49265
   *  Blocks Rewards 
   *    1 - 29.999 -  3 Coins
-  *    30.000 - 170.999 -  9 Coins
-  *    171.000 - 174.999 - 25 Coins
-  *    175.000 - 347.999 -  5 Coins
-  *    348.000 - 349.999 - 50 Coins
-  *    350.000 - 524.999 -  3 Coins
-  *    525.000 up to 10.000.000 Millions Coins - 3 Coins
+  *    30.000  -  70.000 -   9 Coins
+  *    70.001  - 150.000 -  50 Coins
+  *    150.001 - 225.000 -  75 Coins
+  *    225.001 - 300.000 -  90 Coins
+  *    300.001 - 375.000 - 100 Coins
+  *    375.001 - 450.000 - 100 Coins
+  *    450.001 - 525.000 -  90 Coins
+  *    525.001 - 600.000 -  75 Coins
+  *    600.001 - 675.000 -  50 Coins
+  *    675.000 - Infinite - 60 Coins
 -------
 -------
 
@@ -45,12 +49,7 @@
 
 Donations
 -------
-
- Donations for development are greatly appreciated!
- 
-  * DOGE: 
-  * BTC:  
-  
+   
 ### LICENSE
 -------
 
