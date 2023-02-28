@@ -5423,17 +5423,17 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>The Bitcoin Core developers</translation>
+        <source>The Bitcoin Core Developers</source>
+        <translation>The Bitcoin Core Developers</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

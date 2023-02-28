@@ -4237,15 +4237,15 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Versión %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>Los desarrolladores de Bitcoin Core</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>Los desarrolladores de Dash Core</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>Los desarrolladores de Master</translation>
     </message>
     <message>

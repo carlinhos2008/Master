@@ -158,7 +158,7 @@ where possible keep them short, un-complex and easy to verify.
 -------------------------
 
 The following applies to code changes to the MasterStake project, and is not to be
-confused with overall MasterStake Network Protocol consensus changes.
+confused with overall MasterStake Core consensus changes.
 
 Whether a pull request is merged into MasterStake rests with the project merge
 maintainers and ultimately the project lead.

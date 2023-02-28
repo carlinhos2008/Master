@@ -4236,15 +4236,15 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Версия %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>Разработчики Bitcoin Core</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>Разработчики Master</translation>
     </message>
     <message>

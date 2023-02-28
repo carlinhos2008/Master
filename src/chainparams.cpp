@@ -1,8 +1,8 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018-2019 The MasterStake developers
+// Copyright (c) 2009-2014 The Bitcoin Developers
+// Copyright (c) 2014-2015 The Dash Developers
+// Copyright (c) 2015-2018 The PIVX Developers
+// Copyright (c) 2018-2019 The MasterStake Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -54,7 +54,9 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-(0,  uint256("0x0000f00ba769187169bc7e9b4fd82c73ce31d355c35915a5d999ef55d3c903fb"));
+(0,  uint256("0x0000f00ba769187169bc7e9b4fd82c73ce31d355c35915a5d999ef55d3c903fb"))
+(30000,  uint256("0x5eeb2506118774474e9046969518d03a3cd6f2684bb4e962f393733af2b306a9"))
+(65000,  uint256("0x23570dd298f5b03e64ed380a982792bc417f3b60e02893f65ed6d433574c8d4d"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -121,11 +123,11 @@ public:
         nMinerThreads = 0;
         nTargetSpacing = 3 * 60;  // MASTER: 3 minutes
         nMaturity = 24;
-        nMaxMoneyOut = 200000000 * COIN;
+        nMaxMoneyOut = 50000000 * COIN;
 
         nSubsidyHalvingBlock = 1000;
         
-        strDevFeeAddress = "MHrThmoWKXH9qqhVTRmnBXtPks7u2xGABe";
+        strDevFeeAddress = "MHrThmoWKXH9qqhVTRmnBXtPks7u2xGABe", "MTPjTgHQGsd3hkkY7rUaxWnXU4yJvHpDFp";
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
@@ -158,12 +160,12 @@ public:
         assert(hashGenesisBlock == uint256("0x0000f00ba769187169bc7e9b4fd82c73ce31d355c35915a5d999ef55d3c903fb"));
         assert(genesis.hashMerkleRoot == uint256("0x318407c1baff76f6dcaa61de5525f99d8920b6b3dca2b290c68b2f1cb6726cc1"));
 
-        vSeeds.push_back(CDNSSeedData("seed1.masterstake.net", "seed1.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed2.masterstake.net", "seed2.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed3.masterstake.net", "seed3.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed4.masterstake.net", "seed4.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed5.masterstake.net", "seed5.masterstake.net"));
-        vSeeds.push_back(CDNSSeedData("seed6.masterstake.net", "seed6.masterstake.net"));
+        vSeeds.push_back(CDNSSeedData("seed1.masterstake.top", "seed1.masterstake.top"));
+        vSeeds.push_back(CDNSSeedData("seed2.masterstake.top", "seed2.masterstake.top"));
+        vSeeds.push_back(CDNSSeedData("seed3.masterstake.top", "seed3.masterstake.top"));
+        vSeeds.push_back(CDNSSeedData("seed4.masterstake.top", "seed4.masterstake.top"));
+        vSeeds.push_back(CDNSSeedData("seed5.masterstake.top", "seed5.masterstake.top"));
+        vSeeds.push_back(CDNSSeedData("seed6.masterstake.top", "seed6.masterstake.top"));
         vSeeds.push_back(CDNSSeedData("84.54.23.196", "84.54.23.196"));
         vSeeds.push_back(CDNSSeedData("164.68.123.250", "164.68.123.250"));
         vSeeds.push_back(CDNSSeedData("167.86.80.59", "167.86.80.59"));

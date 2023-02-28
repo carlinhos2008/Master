@@ -1,6 +1,6 @@
 // Copyright (c) 2014-2016 The Dash Developers
-// Copyright (c) 2016-2018 The PIVX developers
-// Copyright (c) 2020-2022 The MasterStake developers
+// Copyright (c) 2016-2018 The PIVX Developers
+// Copyright (c) 2020-2022 The MasterStake Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

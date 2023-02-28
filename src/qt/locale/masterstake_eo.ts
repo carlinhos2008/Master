@@ -2465,15 +2465,15 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>Master kerno</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>La Bitcoin kerno programistoj</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>La Dash kerno programistoj</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>La Master kerno programistoj</translation>
     </message>
     </context>

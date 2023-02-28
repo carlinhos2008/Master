@@ -21,7 +21,7 @@
 #define CLIENT_VERSION_MINOR 1
 
 /* Build revision */
-#define CLIENT_VERSION_REVISION 1
+#define CLIENT_VERSION_REVISION 2
 
 /* Version is release */
 #define COPYRIGHT_YEAR 2022
@@ -54,7 +54,7 @@
 #define HAVE_BOOST_THREAD /**/
 
 /* define if the Boost::Unit_Test_Framework library is available */
-#define HAVE_BOOST_UNIT_TEST_FRAMEWORK /**/
+/* #undef HAVE_BOOST_UNIT_TEST_FRAMEWORK */
 
 /* Define this symbol if the consensus lib has been built */
 /* #undef HAVE_CONSENSUS_LIB */
@@ -125,7 +125,7 @@
 /* #undef HAVE_GETADDRINFO_A */
 
 /* Define this symbol if you have inet_pton */
-/* #undef HAVE_INET_PTON */
+#define HAVE_INET_PTON 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -266,7 +266,7 @@
 #define HAVE_SYS_TYPES_H 1
 
 /* Define if thread_local is supported. */
-/* #undef HAVE_THREAD_LOCAL */
+#define HAVE_THREAD_LOCAL 1
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
@@ -284,13 +284,13 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "www.masterstake.net"
+#define PACKAGE_BUGREPORT "www.masterstake.top"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "MasterStake"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "MasterStake 2.1.1"
+#define PACKAGE_STRING "MasterStake 2.1.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "masterstake"
@@ -299,7 +299,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.1.1"
+#define PACKAGE_VERSION "2.1.2"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */

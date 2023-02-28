@@ -14,11 +14,11 @@
 
 @SET_MAKE@
 
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bitcoin Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bitcoin Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -114,7 +114,7 @@ TESTS = $(am__EXEEXT_6) $(am__EXEEXT_5)
 @TARGET_WINDOWS_TRUE@am__append_9 = masterstake-tx-res.rc
 @BUILD_BITCOIN_LIBS_TRUE@@GLIBC_BACK_COMPAT_TRUE@am__append_10 = compat/glibc_compat.cpp
 
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bitcoin Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 @ENABLE_TESTS_TRUE@am__append_11 = test/test_masterstake test/bitcoin-util-test.py
@@ -185,7 +185,7 @@ TESTS = $(am__EXEEXT_6) $(am__EXEEXT_5)
 @ENABLE_QT_TRUE@@ENABLE_ZMQ_TRUE@am__append_25 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 @ENABLE_QT_TRUE@am__append_26 = $(CLEAN_QT)
 
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bitcoin Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 @ENABLE_QT_TESTS_TRUE@am__append_27 = qt/test/test_masterstake-qt

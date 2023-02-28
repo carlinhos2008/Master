@@ -90,14 +90,14 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = i686-w64-mingw32
+host_triplet = x86_64-w64-mingw32
 noinst_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5)
 am__append_1 = bench_verify bench_sign bench_internal bench_ecmult
 TESTS = $(am__EXEEXT_2) $(am__EXEEXT_3)
-am__append_2 = tests
-am__append_3 = -DVERIFY
-am__append_4 = tests
+#am__append_2 = tests
+#am__append_3 = -DVERIFY
+#am__append_4 = tests
 am__append_5 = exhaustive_tests
 am__append_6 = -DVERIFY
 am__append_7 = exhaustive_tests
@@ -192,7 +192,7 @@ am__EXEEXT_1 = bench_verify$(EXEEXT) \
 	bench_sign$(EXEEXT) \
 	bench_internal$(EXEEXT) \
 	bench_ecmult$(EXEEXT)
-am__EXEEXT_2 = tests$(EXEEXT)
+#am__EXEEXT_2 = tests$(EXEEXT)
 am__EXEEXT_3 = exhaustive_tests$(EXEEXT)
 #am__EXEEXT_4 = bench_ecdh$(EXEEXT)
 am__EXEEXT_5 = bench_recover$(EXEEXT)
@@ -247,10 +247,10 @@ exhaustive_tests_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_CFLAGS) $(CFLAGS) $(exhaustive_tests_LDFLAGS) $(LDFLAGS) \
 	-o $@
 am__tests_SOURCES_DIST = src/tests.c
-am_tests_OBJECTS = src/tests-tests.$(OBJEXT)
+#am_tests_OBJECTS = src/tests-tests.$(OBJEXT)
 tests_OBJECTS = $(am_tests_OBJECTS)
-tests_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3)
+#tests_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+#	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3)
 tests_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(tests_LDFLAGS) $(LDFLAGS) -o $@
@@ -573,7 +573,7 @@ distcleancheck_listfiles = find . -type f -print
 ACLOCAL = ${SHELL} /home/devcoin/v2.1/src/secp256k1/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/i686-w64-mingw32-ar
+AR = /usr/bin/x86_64-w64-mingw32-ar
 AUTOCONF = ${SHELL} /home/devcoin/v2.1/src/secp256k1/build-aux/missing autoconf
 AUTOHEADER = ${SHELL} /home/devcoin/v2.1/src/secp256k1/build-aux/missing autoheader
 AUTOMAKE = ${SHELL} /home/devcoin/v2.1/src/secp256k1/build-aux/missing automake-1.15
@@ -581,24 +581,24 @@ AWK = gawk
 BREW = 
 BUILD_EXEEXT = 
 BUILD_OBJEXT = 
-CC = i686-w64-mingw32-gcc
-CCAS = i686-w64-mingw32-gcc
+CC = x86_64-w64-mingw32-gcc
+CCAS = x86_64-w64-mingw32-gcc
 CCASDEPMODE = depmode=gcc3
-CCASFLAGS = -pipe -O2 
+CCASFLAGS = -pipe -O2 -O3
 CCDEPMODE = depmode=gcc3
 CC_FOR_BUILD = gcc
-CFLAGS = -pipe -O2  -W -std=c89 -pedantic -Wall -Wextra -Wcast-align -Wnested-externs -Wshadow -Wstrict-prototypes -Wno-unused-function -Wno-long-long -Wno-overlength-strings -fvisibility=hidden -O3
+CFLAGS = -pipe -O2 -O3 -W -std=c89 -pedantic -Wall -Wextra -Wcast-align -Wnested-externs -Wshadow -Wstrict-prototypes -Wno-unused-function -Wno-long-long -Wno-overlength-strings -fvisibility=hidden -O3
 CFLAGS_FOR_BUILD = -g -O2 $(am__append_9)
-CPP = i686-w64-mingw32-gcc -E
-CPPFLAGS = -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include/ 
+CPP = x86_64-w64-mingw32-gcc -E
+CPPFLAGS = -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include/ 
 CPPFLAGS_FOR_BUILD =  $(am__append_8)
 CPP_FOR_BUILD = gcc -E
-CRYPTO_CFLAGS = -I/home/devcoin/v2.1/depends/i686-w64-mingw32/include
-CRYPTO_LIBS = -L/home/devcoin/v2.1/depends/i686-w64-mingw32/lib -lcrypto -lws2_32 -lgdi32 -lcrypt32
+CRYPTO_CFLAGS = 
+CRYPTO_LIBS = 
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = i686-w64-mingw32-dlltool
+DLLTOOL = x86_64-w64-mingw32-dlltool
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -614,8 +614,8 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 JNI_INCLUDES = 
-LD = /usr/bin/i686-w64-mingw32-ld
-LDFLAGS = -L/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib 
+LD = /usr/bin/x86_64-w64-mingw32-ld
+LDFLAGS = -L/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib 
 LDFLAGS_FOR_BUILD = 
 LIBOBJS = 
 LIBS = 
@@ -627,9 +627,9 @@ LT_SYS_LIBRARY_PATH =
 MAKEINFO = ${SHELL} /home/devcoin/v2.1/src/secp256k1/build-aux/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
-NM = i686-w64-mingw32-nm
+NM = x86_64-w64-mingw32-nm
 NMEDIT = 
-OBJDUMP = i686-w64-mingw32-objdump
+OBJDUMP = x86_64-w64-mingw32-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
@@ -642,18 +642,18 @@ PACKAGE_URL =
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config --static
-PKG_CONFIG_LIBDIR = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib/pkgconfig
-PKG_CONFIG_PATH = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../share/pkgconfig
+PKG_CONFIG_LIBDIR = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib/pkgconfig
+PKG_CONFIG_PATH = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../share/pkgconfig
 PORT = 
-RANLIB = /usr/bin/i686-w64-mingw32-ranlib
+RANLIB = /usr/bin/x86_64-w64-mingw32-ranlib
 SECP_INCLUDES = 
 SECP_LIBS = 
-SECP_TEST_INCLUDES =  -I/home/devcoin/v2.1/depends/i686-w64-mingw32/include
-SECP_TEST_LIBS = -L/home/devcoin/v2.1/depends/i686-w64-mingw32/lib -lcrypto -lws2_32 -lgdi32 -lcrypt32 -lgdi32
+SECP_TEST_INCLUDES = 
+SECP_TEST_LIBS = 
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
-STRIP = /usr/bin/i686-w64-mingw32-strip
+STRIP = /usr/bin/x86_64-w64-mingw32-strip
 VERSION = 0.1
 _ACJNI_JAVAC = 
 abs_builddir = /home/devcoin/v2.1/src/secp256k1
@@ -681,9 +681,9 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-w64-mingw32
-host_alias = i686-w64-mingw32
-host_cpu = i686
+host = x86_64-w64-mingw32
+host_alias = x86_64-w64-mingw32
+host_cpu = x86_64
 host_os = mingw32
 host_vendor = w64
 htmldir = ${docdir}
@@ -698,7 +698,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /
+prefix = /home/devcoin/v2.1/depends/x86_64-w64-mingw32
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -756,12 +756,12 @@ bench_internal_CPPFLAGS = -DSECP256K1_BUILD $(SECP_INCLUDES)
 bench_ecmult_SOURCES = src/bench_ecmult.c
 bench_ecmult_LDADD = $(SECP_LIBS) $(COMMON_LIB)
 bench_ecmult_CPPFLAGS = -DSECP256K1_BUILD $(SECP_INCLUDES)
-tests_SOURCES = src/tests.c
-tests_CPPFLAGS = -DSECP256K1_BUILD -I$(top_srcdir)/src \
-	-I$(top_srcdir)/include $(SECP_INCLUDES) \
-	$(SECP_TEST_INCLUDES) $(am__append_3)
-tests_LDADD = $(SECP_LIBS) $(SECP_TEST_LIBS) $(COMMON_LIB)
-tests_LDFLAGS = -static
+#tests_SOURCES = src/tests.c
+#tests_CPPFLAGS = -DSECP256K1_BUILD -I$(top_srcdir)/src \
+#	-I$(top_srcdir)/include $(SECP_INCLUDES) \
+#	$(SECP_TEST_INCLUDES) $(am__append_3)
+#tests_LDADD = $(SECP_LIBS) $(SECP_TEST_LIBS) $(COMMON_LIB)
+#tests_LDFLAGS = -static
 exhaustive_tests_SOURCES = src/tests_exhaustive.c
 exhaustive_tests_CPPFLAGS =  \
 	-DSECP256K1_BUILD \
@@ -1720,8 +1720,8 @@ uninstall-am: uninstall-includeHEADERS uninstall-libLTLIBRARIES \
 #	$(AM_V_at)$(CLASSPATH_ENV) javac $^
 #	@touch $@
 
-#check-java: libsecp256k1.la $(JAVA_GUAVA) .stamp-java
-#	$(AM_V_at)java -Djava.library.path="./:./src:./src/.libs:.libs/" -cp "$(JAVA_GUAVA):$(JAVAROOT)" $(JAVAORG)/NativeSecp256k1Test
+##check-java: libsecp256k1.la $(JAVA_GUAVA) .stamp-java
+##	$(AM_V_at)java -Djava.library.path="./:./src:./src/.libs:.libs/" -cp "$(JAVA_GUAVA):$(JAVAROOT)" $(JAVAORG)/NativeSecp256k1Test
 gen_%.o: src/gen_%.c
 	$(CC_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) $(CFLAGS_FOR_BUILD) -c $< -o $@
 

@@ -4228,15 +4228,15 @@ Präge entweder höhere Stückelungen (damit weniger Eingaben benötigt werdenn)
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>Die Bitcoin Core Entwickler</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>Die Dash Core Entwickler</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>Die Master Entwickler</translation>
     </message>
     <message>

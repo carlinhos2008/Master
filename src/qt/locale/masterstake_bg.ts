@@ -4225,15 +4225,15 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Версия %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>Bitcoin Core разработчици</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>Dash Core разработчици</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>Master разработчици</translation>
     </message>
     <message>

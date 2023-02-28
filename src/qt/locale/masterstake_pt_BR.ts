@@ -3119,15 +3119,15 @@ https://www.transifex.com/master-project/master-project-translations</translatio
         <translation>Versão %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>Os desenvolvedores do Bitcoin Core</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>Os desenvolvedores do Dash Core</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>Os desenvolvedores do Master</translation>
     </message>
     <message>

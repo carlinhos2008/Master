@@ -4153,15 +4153,15 @@ Minta antingen högre valörer (så att färre inputs behövs) eller spendera mi
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>Bitcoin Core utvecklarna</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>Dash Core utvecklarna</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>Master utvecklarna</translation>
     </message>
     <message>

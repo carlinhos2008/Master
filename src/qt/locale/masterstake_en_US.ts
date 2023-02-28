@@ -3284,16 +3284,16 @@ https://www.transifex.com/master-project/master-project-translations</translatio
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>The Bitcoin Core developers</translation>
+        <source>The Bitcoin Core Developers</source>
+        <translation>The Bitcoin Core Developers</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
-        <translation>The Dash Core developers</translation>
+        <source>The Dash Core Developers</source>
+        <translation>The Dash Core Developers</translation>
     </message>
     <message>
-        <source>The Master developers</source>
-        <translation>The Master developers</translation>
+        <source>The Master Developers</source>
+        <translation>The Master Developers</translation>
     </message>
     <message>
         <source>[testnet]</source>

@@ -1,9 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The PIVX developers
+// Copyright (c) 2009-2014 The Bitcoin Developers
+// Copyright (c) 2014-2015 The Dash Developers
+// Copyright (c) 2015-2018 The PIVX Developers
 // Copyright (c) 2017-2019 The Phore Developers
-// Copyright (c) 2020-2022 The MasterStake developers
+// Copyright (c) 2020-2022 The MasterStake Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1791,14 +1791,13 @@ CAmount GetCurrentCollateral()
 {
     int blockHeight = chainActive.Height();
 
-    if (blockHeight >  675000) return 1000000 ; /* Fase Reward -  60 Master */
-    if (blockHeight >  600000) return  500000 ; /* Fase Reward -  50 Master */
-    if (blockHeight >  525000) return  425000 ; /* Fase Reward -  75 Master */
-    if (blockHeight >  450000) return  375000 ; /* Fase Reward -  90 Master */
-    if (blockHeight >  375000) return  325000 ; /* Fase Reward - 100 Master */
-    if (blockHeight >  300000) return  275000 ; /* Fase Reward - 100 Master */
-    if (blockHeight >  225000) return  225000 ; /* Fase Reward -  90 Master */
-    if (blockHeight >  150000) return  175000 ; /* Fase Reward -  75 Master */ 
+    if (blockHeight >  600000) return  500000 ; /* Fase Reward -  10 Master */
+    if (blockHeight >  525000) return  425000 ; /* Fase Reward -  15 Master */
+    if (blockHeight >  380000) return  350000 ; /* Fase Reward -  25 Master */
+    if (blockHeight >  375000) return  250000 ; /* Fase Bônus  - 100 Master */
+    if (blockHeight >  300000) return  200000 ; /* Fase Reward -  15 Master */
+    if (blockHeight >  225000) return  150000 ; /* Fase Reward -  25 Master */
+    if (blockHeight >  150000) return  100000 ; /* Fase Reward -  35 Master */ 
     if (blockHeight >   70000) return  125000 ; /* Fase Reward -  50 Master */ 
     if (blockHeight >     200) return   15000 ;  
 
@@ -1839,24 +1838,22 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = COIN * 9;
     } else if ( nHeight >= 70001 && nHeight <= 150000) { /* Fase Collateral - 125000 Master */
         nSubsidy = COIN * 50;
-    } else if ( nHeight >= 150001 && nHeight <= 225000) { /* Fase Collateral - 175000 Master */
-        nSubsidy = COIN * 75;
-    } else if ( nHeight >= 225001 && nHeight <= 300000) { /* Fase Collateral - 225000 Master */
-        nSubsidy = COIN * 90;
-    } else if ( nHeight >= 300001 && nHeight <= 375000) { /* Fase Collateral - 275000 Master */
+    } else if ( nHeight >= 150001 && nHeight <= 225000) { /* Fase Collateral - 100000 Master */
+        nSubsidy = COIN * 35;
+    } else if ( nHeight >= 225001 && nHeight <= 300000) { /* Fase Collateral - 150000 Master */
+        nSubsidy = COIN * 25;
+    } else if ( nHeight >= 300001 && nHeight <= 375000) { /* Fase Collateral - 200000 Master */
+        nSubsidy = COIN * 15;
+    } else if ( nHeight >= 375001 && nHeight <= 380000) { /* Fase Collateral - 250000 Master */
         nSubsidy = COIN * 100;
-    } else if ( nHeight >= 375001 && nHeight <= 450000) { /* Fase Collateral - 325000 Master */
-        nSubsidy = COIN * 100;
-    } else if ( nHeight >= 450001 && nHeight <= 525000) { /* Fase Collateral - 375000 Master */
-        nSubsidy = COIN * 90;
+    } else if ( nHeight >= 380001 && nHeight <= 525000) { /* Bônus Collateral - 350000 Master */
+        nSubsidy = COIN * 25;
     } else if ( nHeight >= 525001 && nHeight <= 600000) { /* Fase Collateral - 425000 Master */
-        nSubsidy = COIN * 75; 
-    } else if ( nHeight >= 600001 && nHeight <= 675000) { /* Fase Collateral - 500000 Master */
-        nSubsidy = COIN * 50;
-    } else if ( nHeight >= 675001 && nHeight <= 5000000) { /* Fase Collateral - 1000000 Master */
-        nSubsidy = COIN * 60;                     
+        nSubsidy = COIN * 15; 
+    } else if ( nHeight >= 600001 && nHeight <= 5000000) { /* Fase Collateral - 500000 Master */
+        nSubsidy = COIN * 10;
     } else {
-        nSubsidy = COIN * 60;
+        nSubsidy = COIN * 10;
     }
     return nSubsidy;
 }
@@ -1868,10 +1865,16 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, bool isZMASTERStak
         nMNSubsidy = COIN * 0;
     } else if (nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 65000){
         nMNSubsidy = blockValue *  0.80;
-    } else if ( nHeight >= 65001 && nHeight <= 5000000) {
+    } else if ( nHeight >= 65001 && nHeight <= 224900) {
         nMNSubsidy = blockValue *  0.90;
+    } else if ( nHeight >= 224901 && nHeight <= 374950) {
+        nMNSubsidy = blockValue *  0.80;
+    } else if ( nHeight >= 374951 && nHeight <= 379975) {
+        nMNSubsidy = blockValue *  0.95;
+    } else if ( nHeight >= 379976 && nHeight <= 5000000) {
+        nMNSubsidy = blockValue *  0.85;            
     } else{
-        nMNSubsidy = blockValue *  0.90;
+        nMNSubsidy = blockValue *  0.85;
     }
     return nMNSubsidy;
 }

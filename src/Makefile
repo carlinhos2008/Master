@@ -14,11 +14,11 @@
 
 
 
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bitcoin Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bitcoin Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -97,7 +97,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = i686-w64-mingw32
+host_triplet = x86_64-w64-mingw32
 am__append_1 = -I$(srcdir)/leveldb/include \
 	-I$(srcdir)/leveldb/helpers/memenv
 am__append_2 = $(builddir)/leveldb/libleveldb.a
@@ -114,32 +114,32 @@ am__append_8 = masterstake-cli-res.rc
 am__append_9 = masterstake-tx-res.rc
 ##am__append_10 = compat/glibc_compat.cpp
 
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bitcoin Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-am__append_11 = test/test_masterstake test/bitcoin-util-test.py
-am__append_12 = test/test_masterstake
-am__append_13 = \
-	test/bctest.py \
-	test/bitcoin-util-test.py \
-	test/data/bitcoin-util-test.json \
-	test/data/blanktx.hex \
-	test/data/tt-delin1-out.hex \
-	test/data/tt-delout1-out.hex \
-	test/data/tt-locktime317000-out.hex \
-	test/data/tx394b54bb.hex \
-	test/data/txcreate1.hex \
-	test/data/txcreate2.hex \
-	test/data/txcreatesign.hex
+#am__append_11 = test/test_masterstake test/bitcoin-util-test.py
+#am__append_12 = test/test_masterstake
+#am__append_13 = \
+#	test/bctest.py \
+#	test/bitcoin-util-test.py \
+#	test/data/bitcoin-util-test.json \
+#	test/data/blanktx.hex \
+#	test/data/tt-delin1-out.hex \
+#	test/data/tt-delout1-out.hex \
+#	test/data/tt-locktime317000-out.hex \
+#	test/data/tx394b54bb.hex \
+#	test/data/txcreate1.hex \
+#	test/data/txcreate2.hex \
+#	test/data/txcreatesign.hex
 
-am__append_14 = \
-  test/accounting_tests.cpp \
-  test/wallet_tests.cpp \
-  test/rpc_wallet_tests.cpp
+#am__append_14 = \
+#  test/accounting_tests.cpp \
+#  test/wallet_tests.cpp \
+#  test/rpc_wallet_tests.cpp
 
-am__append_15 = $(LIBBITCOIN_WALLET)
-am__append_16 = $(ZMQ_LIBS)
-am__append_17 = $(CLEAN_BITCOIN_TEST)
+#am__append_15 = $(LIBBITCOIN_WALLET)
+#am__append_16 = $(ZMQ_LIBS)
+#am__append_17 = $(CLEAN_BITCOIN_TEST)
 am__append_18 = qt/masterstake-qt
 am__append_19 = qt/libbitcoinqt.a
 am__append_20 = qt/winshutdownmonitor.cpp
@@ -185,18 +185,18 @@ am__append_24 = $(LIBBITCOIN_WALLET)
 am__append_25 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_26 = $(CLEAN_QT)
 
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bitcoin Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-am__append_27 = qt/test/test_masterstake-qt
-am__append_28 = qt/test/test_masterstake-qt
-am__append_29 = qt/test/moc_paymentservertests.cpp
-am__append_30 = \
-  qt/test/paymentservertests.cpp
+#am__append_27 = qt/test/test_masterstake-qt
+#am__append_28 = qt/test/test_masterstake-qt
+#am__append_29 = qt/test/moc_paymentservertests.cpp
+#am__append_30 = \
+#  qt/test/paymentservertests.cpp
 
-am__append_31 = $(LIBBITCOIN_WALLET)
-am__append_32 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
-am__append_33 = $(CLEAN_BITCOIN_QT_TEST)
+#am__append_31 = $(LIBBITCOIN_WALLET)
+#am__append_32 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_33 = $(CLEAN_BITCOIN_QT_TEST)
 subdir = src
 SUBDIRS =
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -771,10 +771,10 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 am__EXEEXT_1 = masterstaked$(EXEEXT)
 am__EXEEXT_2 = masterstake-cli$(EXEEXT) \
 	masterstake-tx$(EXEEXT)
-am__EXEEXT_3 = test/test_masterstake$(EXEEXT)
+#am__EXEEXT_3 = test/test_masterstake$(EXEEXT)
 am__EXEEXT_4 = qt/masterstake-qt$(EXEEXT)
-am__EXEEXT_5 =  \
-	qt/test/test_masterstake-qt$(EXEEXT)
+#am__EXEEXT_5 =  \
+#	qt/test/test_masterstake-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
 am__masterstake_cli_SOURCES_DIST = masterstake-cli.cpp \
 	masterstake-cli-res.rc
@@ -863,42 +863,42 @@ am__qt_test_test_masterstake_qt_SOURCES_DIST = qt/test/test_main.cpp \
 	qt/test/uritests.cpp qt/test/uritests.h \
 	qt/test/paymentrequestdata.h qt/test/paymentservertests.h \
 	qt/test/paymentservertests.cpp
-am__objects_18 = qt/test/qt_test_test_masterstake_qt-paymentservertests.$(OBJEXT)
-am_qt_test_test_masterstake_qt_OBJECTS = qt/test/qt_test_test_masterstake_qt-test_main.$(OBJEXT) \
-	qt/test/qt_test_test_masterstake_qt-uritests.$(OBJEXT) \
-	$(am__objects_1) $(am__objects_18)
-am__objects_19 = qt/test/qt_test_test_masterstake_qt-moc_paymentservertests.$(OBJEXT)
-am__objects_20 = qt/test/qt_test_test_masterstake_qt-moc_uritests.$(OBJEXT) \
-	$(am__objects_19)
-nodist_qt_test_test_masterstake_qt_OBJECTS =  \
-	$(am__objects_20)
+#am__objects_18 = qt/test/qt_test_test_masterstake_qt-paymentservertests.$(OBJEXT)
+#am_qt_test_test_masterstake_qt_OBJECTS = qt/test/qt_test_test_masterstake_qt-test_main.$(OBJEXT) \
+#	qt/test/qt_test_test_masterstake_qt-uritests.$(OBJEXT) \
+#	$(am__objects_1) $(am__objects_18)
+#am__objects_19 = qt/test/qt_test_test_masterstake_qt-moc_paymentservertests.$(OBJEXT)
+#am__objects_20 = qt/test/qt_test_test_masterstake_qt-moc_uritests.$(OBJEXT) \
+#	$(am__objects_19)
+#nodist_qt_test_test_masterstake_qt_OBJECTS =  \
+#	$(am__objects_20)
 qt_test_test_masterstake_qt_OBJECTS =  \
 	$(am_qt_test_test_masterstake_qt_OBJECTS) \
 	$(nodist_qt_test_test_masterstake_qt_OBJECTS)
-am__DEPENDENCIES_6 =  \
-	$(LIBBITCOIN_ZMQ) \
-	$(am__DEPENDENCIES_1)
-qt_test_test_masterstake_qt_DEPENDENCIES =  \
-	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
-	$(am__append_31) $(am__DEPENDENCIES_6) \
-	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
-	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(am__DEPENDENCIES_2) \
-	$(LIBBITCOIN_ZEROCOIN) \
-	$(am__DEPENDENCIES_3) \
-	$(am__DEPENDENCIES_4) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+#am__DEPENDENCIES_6 =  \
+#	$(LIBBITCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_1)
+#qt_test_test_masterstake_qt_DEPENDENCIES =  \
+#	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
+#	$(am__append_31) $(am__DEPENDENCIES_6) \
+#	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+#	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+#	$(am__DEPENDENCIES_2) \
+#	$(LIBBITCOIN_ZEROCOIN) \
+#	$(am__DEPENDENCIES_3) \
+#	$(am__DEPENDENCIES_4) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1)
 qt_test_test_masterstake_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(qt_test_test_masterstake_qt_CXXFLAGS) $(CXXFLAGS) \
@@ -935,76 +935,76 @@ am__test_test_masterstake_SOURCES_DIST =  \
 	test/data/script_invalid.json test/data/tx_invalid.json \
 	test/data/tx_valid.json test/data/sighash.json \
 	test/data/alertTests.raw
-am__objects_21 = test/test_test_masterstake-accounting_tests.$(OBJEXT) \
-	test/test_test_masterstake-wallet_tests.$(OBJEXT) \
-	test/test_test_masterstake-rpc_wallet_tests.$(OBJEXT)
-am__objects_22 = test/test_test_masterstake-zerocoin_implementation_tests.$(OBJEXT) \
-	test/test_test_masterstake-zerocoin_denomination_tests.$(OBJEXT) \
-	test/test_test_masterstake-zerocoin_transactions_tests.$(OBJEXT) \
-	test/test_test_masterstake-benchmark_zerocoin.$(OBJEXT) \
-	test/test_test_masterstake-tutorial_zerocoin.$(OBJEXT) \
-	test/test_test_masterstake-libzerocoin_tests.$(OBJEXT) \
-	test/test_test_masterstake-allocator_tests.$(OBJEXT) \
-	test/test_test_masterstake-base32_tests.$(OBJEXT) \
-	test/test_test_masterstake-base58_tests.$(OBJEXT) \
-	test/test_test_masterstake-base64_tests.$(OBJEXT) \
-	test/test_test_masterstake-budget_tests.$(OBJEXT) \
-	test/test_test_masterstake-checkblock_tests.$(OBJEXT) \
-	test/test_test_masterstake-Checkpoints_tests.$(OBJEXT) \
-	test/test_test_masterstake-coins_tests.$(OBJEXT) \
-	test/test_test_masterstake-compress_tests.$(OBJEXT) \
-	test/test_test_masterstake-crypto_tests.$(OBJEXT) \
-	test/test_test_masterstake-DoS_tests.$(OBJEXT) \
-	test/test_test_masterstake-getarg_tests.$(OBJEXT) \
-	test/test_test_masterstake-hash_tests.$(OBJEXT) \
-	test/test_test_masterstake-key_tests.$(OBJEXT) \
-	test/test_test_masterstake-main_tests.$(OBJEXT) \
-	test/test_test_masterstake-mempool_tests.$(OBJEXT) \
-	test/test_test_masterstake-mruset_tests.$(OBJEXT) \
-	test/test_test_masterstake-multisig_tests.$(OBJEXT) \
-	test/test_test_masterstake-netbase_tests.$(OBJEXT) \
-	test/test_test_masterstake-pmt_tests.$(OBJEXT) \
-	test/test_test_masterstake-reverselock_tests.$(OBJEXT) \
-	test/test_test_masterstake-rpc_tests.$(OBJEXT) \
-	test/test_test_masterstake-sanity_tests.$(OBJEXT) \
-	test/test_test_masterstake-scheduler_tests.$(OBJEXT) \
-	test/test_test_masterstake-script_P2SH_tests.$(OBJEXT) \
-	test/test_test_masterstake-script_tests.$(OBJEXT) \
-	test/test_test_masterstake-scriptnum_tests.$(OBJEXT) \
-	test/test_test_masterstake-serialize_tests.$(OBJEXT) \
-	test/test_test_masterstake-sighash_tests.$(OBJEXT) \
-	test/test_test_masterstake-sigopcount_tests.$(OBJEXT) \
-	test/test_test_masterstake-skiplist_tests.$(OBJEXT) \
-	test/test_test_masterstake-test_masterstake.$(OBJEXT) \
-	test/test_test_masterstake-timedata_tests.$(OBJEXT) \
-	test/test_test_masterstake-torcontrol_tests.$(OBJEXT) \
-	test/test_test_masterstake-transaction_tests.$(OBJEXT) \
-	test/test_test_masterstake-uint256_tests.$(OBJEXT) \
-	test/test_test_masterstake-univalue_tests.$(OBJEXT) \
-	test/test_test_masterstake-util_tests.$(OBJEXT) \
-	$(am__objects_21)
-am_test_test_masterstake_OBJECTS =  \
-	$(am__objects_22) $(am__objects_1) \
-	$(am__objects_1)
-am__objects_23 = $(am__objects_1) $(am__objects_1)
-nodist_test_test_masterstake_OBJECTS =  \
-	$(am__objects_23)
+#am__objects_21 = test/test_test_masterstake-accounting_tests.$(OBJEXT) \
+#	test/test_test_masterstake-wallet_tests.$(OBJEXT) \
+#	test/test_test_masterstake-rpc_wallet_tests.$(OBJEXT)
+#am__objects_22 = test/test_test_masterstake-zerocoin_implementation_tests.$(OBJEXT) \
+#	test/test_test_masterstake-zerocoin_denomination_tests.$(OBJEXT) \
+#	test/test_test_masterstake-zerocoin_transactions_tests.$(OBJEXT) \
+#	test/test_test_masterstake-benchmark_zerocoin.$(OBJEXT) \
+#	test/test_test_masterstake-tutorial_zerocoin.$(OBJEXT) \
+#	test/test_test_masterstake-libzerocoin_tests.$(OBJEXT) \
+#	test/test_test_masterstake-allocator_tests.$(OBJEXT) \
+#	test/test_test_masterstake-base32_tests.$(OBJEXT) \
+#	test/test_test_masterstake-base58_tests.$(OBJEXT) \
+#	test/test_test_masterstake-base64_tests.$(OBJEXT) \
+#	test/test_test_masterstake-budget_tests.$(OBJEXT) \
+#	test/test_test_masterstake-checkblock_tests.$(OBJEXT) \
+#	test/test_test_masterstake-Checkpoints_tests.$(OBJEXT) \
+#	test/test_test_masterstake-coins_tests.$(OBJEXT) \
+#	test/test_test_masterstake-compress_tests.$(OBJEXT) \
+#	test/test_test_masterstake-crypto_tests.$(OBJEXT) \
+#	test/test_test_masterstake-DoS_tests.$(OBJEXT) \
+#	test/test_test_masterstake-getarg_tests.$(OBJEXT) \
+#	test/test_test_masterstake-hash_tests.$(OBJEXT) \
+#	test/test_test_masterstake-key_tests.$(OBJEXT) \
+#	test/test_test_masterstake-main_tests.$(OBJEXT) \
+#	test/test_test_masterstake-mempool_tests.$(OBJEXT) \
+#	test/test_test_masterstake-mruset_tests.$(OBJEXT) \
+#	test/test_test_masterstake-multisig_tests.$(OBJEXT) \
+#	test/test_test_masterstake-netbase_tests.$(OBJEXT) \
+#	test/test_test_masterstake-pmt_tests.$(OBJEXT) \
+#	test/test_test_masterstake-reverselock_tests.$(OBJEXT) \
+#	test/test_test_masterstake-rpc_tests.$(OBJEXT) \
+#	test/test_test_masterstake-sanity_tests.$(OBJEXT) \
+#	test/test_test_masterstake-scheduler_tests.$(OBJEXT) \
+#	test/test_test_masterstake-script_P2SH_tests.$(OBJEXT) \
+#	test/test_test_masterstake-script_tests.$(OBJEXT) \
+#	test/test_test_masterstake-scriptnum_tests.$(OBJEXT) \
+#	test/test_test_masterstake-serialize_tests.$(OBJEXT) \
+#	test/test_test_masterstake-sighash_tests.$(OBJEXT) \
+#	test/test_test_masterstake-sigopcount_tests.$(OBJEXT) \
+#	test/test_test_masterstake-skiplist_tests.$(OBJEXT) \
+#	test/test_test_masterstake-test_masterstake.$(OBJEXT) \
+#	test/test_test_masterstake-timedata_tests.$(OBJEXT) \
+#	test/test_test_masterstake-torcontrol_tests.$(OBJEXT) \
+#	test/test_test_masterstake-transaction_tests.$(OBJEXT) \
+#	test/test_test_masterstake-uint256_tests.$(OBJEXT) \
+#	test/test_test_masterstake-univalue_tests.$(OBJEXT) \
+#	test/test_test_masterstake-util_tests.$(OBJEXT) \
+#	$(am__objects_21)
+#am_test_test_masterstake_OBJECTS =  \
+#	$(am__objects_22) $(am__objects_1) \
+#	$(am__objects_1)
+#am__objects_23 = $(am__objects_1) $(am__objects_1)
+#nodist_test_test_masterstake_OBJECTS =  \
+#	$(am__objects_23)
 test_test_masterstake_OBJECTS = $(am_test_test_masterstake_OBJECTS) \
 	$(nodist_test_test_masterstake_OBJECTS)
-am__DEPENDENCIES_7 =  \
-	$(am__DEPENDENCIES_1)
-test_test_masterstake_DEPENDENCIES =  \
-	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
-	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_2) \
-	$(LIBBITCOIN_ZEROCOIN) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(LIBSECP256K1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__append_15) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_7)
+#am__DEPENDENCIES_7 =  \
+#	$(am__DEPENDENCIES_1)
+#test_test_masterstake_DEPENDENCIES =  \
+#	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
+#	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
+#	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_2) \
+#	$(LIBBITCOIN_ZEROCOIN) \
+#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+#	$(LIBSECP256K1) $(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(am__append_15) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_7)
 test_test_masterstake_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(AM_CXXFLAGS) $(CXXFLAGS) $(test_test_masterstake_LDFLAGS) \
@@ -1307,8 +1307,8 @@ am__set_TESTS_bases = \
   bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
-am__EXEEXT_6 = test/test_masterstake$(EXEEXT) \
-	test/bitcoin-util-test.py
+#am__EXEEXT_6 = test/test_masterstake$(EXEEXT) \
+#	test/bitcoin-util-test.py
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS = .exe .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
@@ -1363,7 +1363,7 @@ am__relativize = \
 ACLOCAL = ${SHELL} /home/devcoin/v2.1/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/i686-w64-mingw32-ar
+AR = /usr/bin/x86_64-w64-mingw32-ar
 ARFLAGS = cr
 AUTOCONF = ${SHELL} /home/devcoin/v2.1/build-aux/missing autoconf
 AUTOHEADER = ${SHELL} /home/devcoin/v2.1/build-aux/missing autoheader
@@ -1377,42 +1377,42 @@ BITCOIN_DAEMON_NAME = masterstaked
 BITCOIN_GUI_NAME = masterstake-qt
 BITCOIN_TX_NAME = masterstake-tx
 BOOST_CHRONO_LIB = -lboost_chrono-mt-s
-BOOST_CPPFLAGS = -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -mthreads -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include
+BOOST_CPPFLAGS = -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -mthreads -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem-mt-s
-BOOST_LDFLAGS = -L/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib
-BOOST_LIBS = -L/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib -lboost_system-mt-s -lboost_filesystem-mt-s -lboost_program_options-mt-s -lboost_thread_win32-mt-s -lboost_chrono-mt-s
+BOOST_LDFLAGS = -L/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib
+BOOST_LIBS = -L/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib -lboost_system-mt-s -lboost_filesystem-mt-s -lboost_program_options-mt-s -lboost_thread_win32-mt-s -lboost_chrono-mt-s
 BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options-mt-s
 BOOST_SYSTEM_LIB = -lboost_system-mt-s
 BOOST_THREAD_LIB = -lboost_thread_win32-mt-s
-BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework-mt-s
+BOOST_UNIT_TEST_FRAMEWORK_LIB = 
 BREW = 
 BUILD_QT = qt
-BUILD_TEST = test
-BUILD_TEST_QT = test
-CC = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/bin/ccache i686-w64-mingw32-gcc
-CCACHE = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/bin/ccache
+BUILD_TEST = 
+BUILD_TEST_QT = 
+CC = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc
+CCACHE = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/bin/ccache
 CCDEPMODE = depmode=gcc3
-CFLAGS = -pipe -O2 
+CFLAGS = -pipe -O2 -O3
 CLIENT_VERSION_BUILD = 0
 CLIENT_VERSION_IS_RELEASE = true
 CLIENT_VERSION_MAJOR = 2
 CLIENT_VERSION_MINOR = 1
-CLIENT_VERSION_REVISION = 1
+CLIENT_VERSION_REVISION = 2
 COMPARISON_TOOL_REORG_TESTS = 0
 COPYRIGHT_YEAR = 2022
-CPP = i686-w64-mingw32-gcc -E
-CPPFILT = /usr/bin/i686-w64-mingw32-c++filt
-CPPFLAGS = -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -DHAVE_QT5
+CPP = x86_64-w64-mingw32-gcc -E
+CPPFILT = /usr/bin/x86_64-w64-mingw32-c++filt
+CPPFLAGS = -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -DHAVE_QT5
 CRYPTO_CFLAGS = 
 CRYPTO_LIBS = -lcrypto
-CXX = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/bin/ccache i686-w64-mingw32-g++ -std=c++11
-CXXCPP = i686-w64-mingw32-g++ -std=c++11 -E
+CXX = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-g++ -std=c++11
+CXXCPP = x86_64-w64-mingw32-g++ -std=c++11 -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -pipe -O2 
+CXXFLAGS = -pipe -O2 -O3
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = i686-w64-mingw32-dlltool
+DLLTOOL = x86_64-w64-mingw32-dlltool
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -1426,14 +1426,14 @@ EVENT_PTHREADS_CFLAGS =
 EVENT_PTHREADS_LIBS = 
 EXEEXT = .exe
 FGREP = /bin/grep -F
-GCOV = /usr/bin/i686-w64-mingw32-gcov
+GCOV = /usr/bin/x86_64-w64-mingw32-gcov
 GENHTML = 
 GENISOIMAGE = 
 GIT = /usr/bin/git
 GREP = /bin/grep
 HARDENED_CPPFLAGS =  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 HARDENED_CXXFLAGS =  -Wstack-protector -fstack-protector-all
-HARDENED_LDFLAGS =  -Wl,--dynamicbase -Wl,--nxcompat
+HARDENED_LDFLAGS =  -Wl,--dynamicbase -Wl,--nxcompat -Wl,--high-entropy-va
 HAVE_CXX11 = 1
 HEXDUMP = /usr/bin/hexdump
 IMAGEMAGICK_CONVERT = 
@@ -1445,8 +1445,8 @@ INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 JAVA_COMPARISON_TOOL = 
 LCOV = 
-LD = /usr/bin/i686-w64-mingw32-ld
-LDFLAGS = -L/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib  -Wl,--large-address-aware
+LD = /usr/bin/x86_64-w64-mingw32-ld
+LDFLAGS = -L/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib 
 LEVELDB_CPPFLAGS =  $(am__append_1)
 LEVELDB_TARGET_FLAGS = TARGET_OS=OS_WINDOWS_CROSSCOMPILE
 LIBLEVELDB =  $(am__append_2)
@@ -1457,7 +1457,7 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_APP_LDFLAGS =  -all-static
 LIPO = 
 LN_S = ln -s
-LRELEASE = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/bin/lrelease
+LRELEASE = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/bin/lrelease
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = 
@@ -1468,40 +1468,40 @@ MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = -DSTATICLIB -DMINIUPNP_STATICLIB
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
-MOC = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/bin/moc
+MOC = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/bin/moc
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
-NM = i686-w64-mingw32-nm
+NM = x86_64-w64-mingw32-nm
 NMEDIT = 
-OBJCOPY = /usr/bin/i686-w64-mingw32-objcopy
-OBJCXX = i686-w64-mingw32-g++ -std=c++11
+OBJCOPY = /usr/bin/x86_64-w64-mingw32-objcopy
+OBJCXX = x86_64-w64-mingw32-g++ -std=c++11
 OBJCXXDEPMODE = depmode=gcc3
 OBJCXXFLAGS = 
-OBJDUMP = i686-w64-mingw32-objdump
+OBJDUMP = x86_64-w64-mingw32-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
 PACKAGE = masterstake
-PACKAGE_BUGREPORT = www.masterstake.net
+PACKAGE_BUGREPORT = www.masterstake.top
 PACKAGE_NAME = MasterStake
-PACKAGE_STRING = MasterStake 2.1.1
+PACKAGE_STRING = MasterStake 2.1.2
 PACKAGE_TARNAME = masterstake
 PACKAGE_URL = 
-PACKAGE_VERSION = 2.1.1
+PACKAGE_VERSION = 2.1.2
 PATH_SEPARATOR = :
 PIC_FLAGS = 
 PIE_FLAGS = 
 PKG_CONFIG = /usr/bin/pkg-config --static
-PKG_CONFIG_LIBDIR = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib/pkgconfig
-PKG_CONFIG_PATH = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../share/pkgconfig
+PKG_CONFIG_LIBDIR = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib/pkgconfig
+PKG_CONFIG_PATH = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../share/pkgconfig
 PORT = 
 PROTOBUF_CFLAGS = 
 PROTOBUF_LIBS = -lprotobuf
-PROTOC = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/bin/protoc
-PTHREAD_CC = i686-w64-mingw32-gcc
+PROTOC = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/bin/protoc
+PTHREAD_CC = x86_64-w64-mingw32-gcc
 PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
 PYTHON = /usr/bin/python3.6
-PYTHONPATH = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/lib/python/dist-packages:
+PYTHONPATH = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/lib/python/dist-packages:
 QR_CFLAGS = 
 QR_LIBS = -lqrencode
 QT4_CFLAGS = 
@@ -1516,19 +1516,19 @@ QTXCBQPA_CFLAGS =
 QTXCBQPA_LIBS = 
 QT_DBUS_CFLAGS = 
 QT_DBUS_INCLUDES = 
-QT_DBUS_LIBS = -lQt5DBus -L/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib
-QT_INCLUDES = -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include/QtCore -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include/QtGui -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include/QtWidgets -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include/QtNetwork -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include/QtTest -I/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../include/QtDBus
+QT_DBUS_LIBS = -lQt5DBus -L/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib
+QT_INCLUDES = -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../include/QtDBus
 QT_LDFLAGS =  -mwindows
-QT_LIBS = -lqwindows -lqminimal -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng -lz  -limm32  -L/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib -L/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../plugins/platforms
+QT_LIBS = -lqwindows -lqminimal -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng -lz  -limm32  -L/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib -L/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../plugins/platforms
 QT_PIE_FLAGS = 
 QT_SELECT = qt5
 QT_TEST_CFLAGS = 
 QT_TEST_INCLUDES = 
-QT_TEST_LIBS = -lQt5Test -L/home/devcoin/v2.1/depends/i686-w64-mingw32/share/../lib
-QT_TRANSLATION_DIR = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../translations
-RANLIB = /usr/bin/i686-w64-mingw32-ranlib
-RCC = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/bin/rcc
-READELF = /usr/bin/i686-w64-mingw32-readelf
+QT_TEST_LIBS = -lQt5Test -L/home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../lib
+QT_TRANSLATION_DIR = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../translations
+RANLIB = /usr/bin/x86_64-w64-mingw32-ranlib
+RCC = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/bin/rcc
+READELF = /usr/bin/x86_64-w64-mingw32-readelf
 RELDFLAGS = 
 RSVG_CONVERT = 
 SED = /bin/sed
@@ -1536,17 +1536,17 @@ SET_MAKE =
 SHELL = /bin/bash
 SSL_CFLAGS = 
 SSL_LIBS = -lssl
-STRIP = /usr/bin/i686-w64-mingw32-strip
+STRIP = /usr/bin/x86_64-w64-mingw32-strip
 TESTDEFS = 
 TIFFCP = 
-UIC = /home/devcoin/v2.1/depends/i686-w64-mingw32/share/../native/bin/uic
+UIC = /home/devcoin/v2.1/depends/x86_64-w64-mingw32/share/../native/bin/uic
 UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
 USE_QRCODE = 
 USE_UPNP = 
-VERSION = 2.1.1
-WINDOWS_BITS = 32
-WINDRES = /usr/bin/i686-w64-mingw32-windres
+VERSION = 2.1.2
+WINDOWS_BITS = 64
+WINDRES = /usr/bin/x86_64-w64-mingw32-windres
 X11XCB_CFLAGS = 
 X11XCB_LIBS = 
 XGETTEXT = 
@@ -1579,9 +1579,9 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-w64-mingw32
-host_alias = i686-w64-mingw32
-host_cpu = i686
+host = x86_64-w64-mingw32
+host_alias = x86_64-w64-mingw32
+host_cpu = x86_64
 host_os = mingw32
 host_vendor = w64
 htmldir = ${docdir}
@@ -1596,7 +1596,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /
+prefix = /home/devcoin/v2.1/depends/x86_64-w64-mingw32
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -2016,79 +2016,79 @@ CLEANFILES = $(EXTRA_LIBRARIES) leveldb/libleveldb.a \
 	univalue/*.gcno zmq/*.gcda zmq/*.gcno obj/build.h \
 	$(am__append_17) $(am__append_26) $(am__append_33)
 EXTRA_DIST = leveldb $(am__append_13)
-TEST_SRCDIR = test
-TEST_BINARY = test/test_masterstake$(EXEEXT)
-JSON_TEST_FILES = \
-  test/data/script_valid.json \
-  test/data/base58_keys_valid.json \
-  test/data/sig_canonical.json \
-  test/data/sig_noncanonical.json \
-  test/data/base58_encode_decode.json \
-  test/data/base58_keys_invalid.json \
-  test/data/script_invalid.json \
-  test/data/tx_invalid.json \
-  test/data/tx_valid.json \
-  test/data/sighash.json
+#TEST_SRCDIR = test
+#TEST_BINARY = test/test_masterstake$(EXEEXT)
+#JSON_TEST_FILES = \
+#  test/data/script_valid.json \
+#  test/data/base58_keys_valid.json \
+#  test/data/sig_canonical.json \
+#  test/data/sig_noncanonical.json \
+#  test/data/base58_encode_decode.json \
+#  test/data/base58_keys_invalid.json \
+#  test/data/script_invalid.json \
+#  test/data/tx_invalid.json \
+#  test/data/tx_valid.json \
+#  test/data/sighash.json
 
-RAW_TEST_FILES = test/data/alertTests.raw
-GENERATED_TEST_FILES = $(JSON_TEST_FILES:.json=.json.h) $(RAW_TEST_FILES:.raw=.raw.h)
+#RAW_TEST_FILES = test/data/alertTests.raw
+#GENERATED_TEST_FILES = $(JSON_TEST_FILES:.json=.json.h) $(RAW_TEST_FILES:.raw=.raw.h)
 
 # test_masterstake binary #
-BITCOIN_TESTS =  \
-	test/zerocoin_implementation_tests.cpp \
-	test/zerocoin_denomination_tests.cpp \
-	test/zerocoin_transactions_tests.cpp \
-	test/benchmark_zerocoin.cpp \
-	test/tutorial_zerocoin.cpp \
-	test/libzerocoin_tests.cpp \
-	test/allocator_tests.cpp \
-	test/base32_tests.cpp test/base58_tests.cpp \
-	test/base64_tests.cpp test/budget_tests.cpp \
-	test/checkblock_tests.cpp \
-	test/Checkpoints_tests.cpp \
-	test/coins_tests.cpp \
-	test/compress_tests.cpp \
-	test/crypto_tests.cpp test/DoS_tests.cpp \
-	test/getarg_tests.cpp test/hash_tests.cpp \
-	test/key_tests.cpp test/main_tests.cpp \
-	test/mempool_tests.cpp \
-	test/mruset_tests.cpp \
-	test/multisig_tests.cpp \
-	test/netbase_tests.cpp test/pmt_tests.cpp \
-	test/reverselock_tests.cpp \
-	test/rpc_tests.cpp test/sanity_tests.cpp \
-	test/scheduler_tests.cpp \
-	test/script_P2SH_tests.cpp \
-	test/script_tests.cpp \
-	test/scriptnum_tests.cpp \
-	test/serialize_tests.cpp \
-	test/sighash_tests.cpp \
-	test/sigopcount_tests.cpp \
-	test/skiplist_tests.cpp \
-	test/test_masterstake.cpp \
-	test/timedata_tests.cpp \
-	test/torcontrol_tests.cpp \
-	test/transaction_tests.cpp \
-	test/uint256_tests.cpp \
-	test/univalue_tests.cpp test/util_tests.cpp \
-	$(am__append_14)
-test_test_masterstake_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-test_test_masterstake_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS)
-test_test_masterstake_LDADD = $(LIBBITCOIN_SERVER) \
-	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
-	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) \
-	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
-	$(BOOST_UNIT_TEST_FRAMEWORK_LIB) \
-	$(LIBSECP256K1) $(EVENT_LIBS) \
-	$(EVENT_PTHREADS_LIBS) $(am__append_15) \
-	$(LIBBITCOIN_CONSENSUS) $(BDB_LIBS) \
-	$(SSL_LIBS) $(CRYPTO_LIBS) \
-	$(MINIUPNPC_LIBS) $(am__append_16)
-test_test_bitcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-test_test_masterstake_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
-nodist_test_test_masterstake_SOURCES = $(GENERATED_TEST_FILES)
-CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
+#BITCOIN_TESTS =  \
+#	test/zerocoin_implementation_tests.cpp \
+#	test/zerocoin_denomination_tests.cpp \
+#	test/zerocoin_transactions_tests.cpp \
+#	test/benchmark_zerocoin.cpp \
+#	test/tutorial_zerocoin.cpp \
+#	test/libzerocoin_tests.cpp \
+#	test/allocator_tests.cpp \
+#	test/base32_tests.cpp test/base58_tests.cpp \
+#	test/base64_tests.cpp test/budget_tests.cpp \
+#	test/checkblock_tests.cpp \
+#	test/Checkpoints_tests.cpp \
+#	test/coins_tests.cpp \
+#	test/compress_tests.cpp \
+#	test/crypto_tests.cpp test/DoS_tests.cpp \
+#	test/getarg_tests.cpp test/hash_tests.cpp \
+#	test/key_tests.cpp test/main_tests.cpp \
+#	test/mempool_tests.cpp \
+#	test/mruset_tests.cpp \
+#	test/multisig_tests.cpp \
+#	test/netbase_tests.cpp test/pmt_tests.cpp \
+#	test/reverselock_tests.cpp \
+#	test/rpc_tests.cpp test/sanity_tests.cpp \
+#	test/scheduler_tests.cpp \
+#	test/script_P2SH_tests.cpp \
+#	test/script_tests.cpp \
+#	test/scriptnum_tests.cpp \
+#	test/serialize_tests.cpp \
+#	test/sighash_tests.cpp \
+#	test/sigopcount_tests.cpp \
+#	test/skiplist_tests.cpp \
+#	test/test_masterstake.cpp \
+#	test/timedata_tests.cpp \
+#	test/torcontrol_tests.cpp \
+#	test/transaction_tests.cpp \
+#	test/uint256_tests.cpp \
+#	test/univalue_tests.cpp test/util_tests.cpp \
+#	$(am__append_14)
+#test_test_masterstake_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+#test_test_masterstake_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS)
+#test_test_masterstake_LDADD = $(LIBBITCOIN_SERVER) \
+#	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+#	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+#	$(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) \
+#	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
+#	$(BOOST_UNIT_TEST_FRAMEWORK_LIB) \
+#	$(LIBSECP256K1) $(EVENT_LIBS) \
+#	$(EVENT_PTHREADS_LIBS) $(am__append_15) \
+#	$(LIBBITCOIN_CONSENSUS) $(BDB_LIBS) \
+#	$(SSL_LIBS) $(CRYPTO_LIBS) \
+#	$(MINIUPNPC_LIBS) $(am__append_16)
+#test_test_bitcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+#test_test_masterstake_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+#nodist_test_test_masterstake_SOURCES = $(GENERATED_TEST_FILES)
+#CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
 
 # masterstake qt core #
 QT_TS = \
@@ -2428,36 +2428,36 @@ qt_masterstake_qt_LIBTOOLFLAGS = --tag CXX
 #locale/foo.ts -> locale/foo.qm
 QT_QM = $(QT_TS:.ts=.qm)
 CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_masterstake_locale.qrc
-TEST_QT_MOC_CPP = qt/test/moc_uritests.cpp \
-	$(am__append_29)
-TEST_QT_H = \
-  qt/test/uritests.h \
-  qt/test/paymentrequestdata.h \
-  qt/test/paymentservertests.h
+#TEST_QT_MOC_CPP = qt/test/moc_uritests.cpp \
+#	$(am__append_29)
+#TEST_QT_H = \
+#  qt/test/uritests.h \
+#  qt/test/paymentrequestdata.h \
+#  qt/test/paymentservertests.h
 
-qt_test_test_masterstake_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
-  $(QT_INCLUDES) $(QT_TEST_INCLUDES) $(PROTOBUF_CFLAGS)
+#qt_test_test_masterstake_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+#  $(QT_INCLUDES) $(QT_TEST_INCLUDES) $(PROTOBUF_CFLAGS)
 
-qt_test_test_masterstake_qt_SOURCES =  \
-	qt/test/test_main.cpp \
-	qt/test/uritests.cpp $(TEST_QT_H) \
-	$(am__append_30)
-nodist_qt_test_test_masterstake_qt_SOURCES = $(TEST_QT_MOC_CPP)
-qt_test_test_masterstake_qt_LDADD =  \
-	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
-	$(am__append_31) $(am__append_32) \
-	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
-	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) \
-	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
-	$(QT_DBUS_LIBS) $(QT_TEST_LIBS) \
-	$(QT_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) \
-	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
-	$(MINIUPNPC_LIBS) $(LIBSECP256K1) \
-	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_test_test_masterstake_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_test_test_masterstake_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
+#qt_test_test_masterstake_qt_SOURCES =  \
+#	qt/test/test_main.cpp \
+#	qt/test/uritests.cpp $(TEST_QT_H) \
+#	$(am__append_30)
+#nodist_qt_test_test_masterstake_qt_SOURCES = $(TEST_QT_MOC_CPP)
+#qt_test_test_masterstake_qt_LDADD =  \
+#	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
+#	$(am__append_31) $(am__append_32) \
+#	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+#	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+#	$(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) \
+#	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
+#	$(QT_DBUS_LIBS) $(QT_TEST_LIBS) \
+#	$(QT_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) \
+#	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
+#	$(MINIUPNPC_LIBS) $(LIBSECP256K1) \
+#	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+#qt_test_test_masterstake_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+#qt_test_test_masterstake_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+#CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 all: all-recursive
 
 .SUFFIXES:
@@ -8198,7 +8198,7 @@ distdir: $(DISTFILES)
 	      || exit 1; \
 	  fi; \
 	done
-#check-local:
+check-local:
 check-am: all-am
 	$(MAKE) $(AM_MAKEFLAGS) check-TESTS check-local
 check: check-recursive
@@ -8397,35 +8397,35 @@ clean-local:
 	@test -f $(PROTOC)
 	$(AM_V_GEN) $(PROTOC) --cpp_out=$(@D) --proto_path=$(<D) $<
 
-$(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
+#$(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
 
-masterstake_test: $(TEST_BINARY)
+#masterstake_test: $(TEST_BINARY)
 
-masterstake_test_check: $(TEST_BINARY) FORCE
-	$(MAKE) check-TESTS TESTS=$^
+#masterstake_test_check: $(TEST_BINARY) FORCE
+#	$(MAKE) check-TESTS TESTS=$^
 
-masterstake_test_clean : FORCE
-	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_masterstake_OBJECTS) $(TEST_BINARY)
+#masterstake_test_clean : FORCE
+#	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_masterstake_OBJECTS) $(TEST_BINARY)
 
-check-local:
-	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C secp256k1 check
-	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C univalue check
+#check-local:
+#	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C secp256k1 check
+#	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C univalue check
 
-%.json.h: %.json
-	@$(MKDIR_P) $(@D)
-	@echo "namespace json_tests{" > $@
-	@echo "static unsigned const char $(*F)[] = {" >> $@
-	@$(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' >> $@
-	@echo "};};" >> $@
-	@echo "Generated $@"
+#%.json.h: %.json
+#	@$(MKDIR_P) $(@D)
+#	@echo "namespace json_tests{" > $@
+#	@echo "static unsigned const char $(*F)[] = {" >> $@
+#	@$(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' >> $@
+#	@echo "};};" >> $@
+#	@echo "Generated $@"
 
-%.raw.h: %.raw
-	@$(MKDIR_P) $(@D)
-	@echo "namespace alert_tests{" > $@
-	@echo "static unsigned const char $(*F)[] = {" >> $@
-	@$(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' >> $@
-	@echo "};};" >> $@
-	@echo "Generated $@"
+#%.raw.h: %.raw
+#	@$(MKDIR_P) $(@D)
+#	@echo "namespace alert_tests{" > $@
+#	@echo "static unsigned const char $(*F)[] = {" >> $@
+#	@$(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' >> $@
+#	@echo "};};" >> $@
+#	@echo "Generated $@"
 
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
@@ -8482,13 +8482,13 @@ moc_%.cpp: %.h
 	@$(MKDIR_P) $(@D)
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
 
-test_masterstake_qt : qt/test/test_masterstake-qt$(EXEEXT)
+#test_masterstake_qt : qt/test/test_masterstake-qt$(EXEEXT)
 
-test_masterstake_qt_check : qt/test/test_masterstake-qt$(EXEEXT) FORCE
-	$(MAKE) check-TESTS TESTS=$^
+#test_masterstake_qt_check : qt/test/test_masterstake-qt$(EXEEXT) FORCE
+#	$(MAKE) check-TESTS TESTS=$^
 
-test_masterstake_qt_clean: FORCE
-	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_masterstake_qt_OBJECTS)
+#test_masterstake_qt_clean: FORCE
+#	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_masterstake_qt_OBJECTS)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

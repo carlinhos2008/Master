@@ -1,7 +1,7 @@
 # Notes
 The sources in this directory are unit test cases.  Boost includes a
 unit testing framework, and since bitcoin already uses boost, it makes
-sense to simply use this framework rather than require developers to
+sense to simply use this framework rather than require Developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 

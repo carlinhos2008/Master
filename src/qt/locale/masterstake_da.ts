@@ -4236,15 +4236,15 @@ Enten mint højere nomineringer (så færre input er nødvendige) eller reducere
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>Bitcoin "core" udviklerne</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>DASH "core" udviklerne</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>Master "core" udviklerne</translation>
     </message>
     <message>

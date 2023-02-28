@@ -4237,15 +4237,15 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>버전 %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>비트코인 Core 개발자</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>Dash Core 개발자</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>Master 개발자</translation>
     </message>
     <message>

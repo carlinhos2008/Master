@@ -4237,15 +4237,15 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Versie %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Core Developers</source>
         <translation>De Bitcoin Kernontwikkelaars</translation>
     </message>
     <message>
-        <source>The Dash Core developers</source>
+        <source>The Dash Core Developers</source>
         <translation>De Dash Kernontwikkelaars</translation>
     </message>
     <message>
-        <source>The Master developers</source>
+        <source>The Master Developers</source>
         <translation>De Master Kernontwikkelaars</translation>
     </message>
     <message>

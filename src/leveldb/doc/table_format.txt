@@ -18,7 +18,7 @@ The file contains internal pointers.  Each such pointer is called
 a BlockHandle and contains the following information:
   offset:	    varint64
   size:		    varint64
-See https://developers.google.com/protocol-buffers/docs/encoding#varints
+See https://Developers.google.com/protocol-buffers/docs/encoding#varints
 for an explanation of varint64 format.
 
 (1) The sequence of key/value pairs in the file are stored in sorted

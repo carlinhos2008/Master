@@ -1,6 +1,6 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
-// Copyright (c) 2016-2018 The PIVX developers
-// Copyright (c) 2020-2022 The MasterStake developers
+// Copyright (c) 2011-2013 The Bitcoin Developers
+// Copyright (c) 2016-2018 The PIVX Developers
+// Copyright (c) 2020-2022 The MasterStake Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -148,7 +148,7 @@ void WalletFrame::gotoPrivacyPage()
     //QMap<QString, WalletView*>::const_iterator i;
     //for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
     //    i.value()->gotoPrivacyPage();
-    QString link = "https://masterstake.net/";
+    QString link = "https://masterstake.top/";
     QDesktopServices::openUrl(QUrl(link));
 }
 
