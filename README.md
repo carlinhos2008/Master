@@ -1,4 +1,4 @@
-# MASTER 2.1.2
+# MASTER 2.1.3
 -------
 -------
 ### TECHNICAL DATA
@@ -13,11 +13,11 @@
   *  TX maturity: 25 blocks
   *  Masternode Confirmation: 15 blocks
   *  Algorithm: Quark
-  *  Colateral: 15.000 ~ 500.000 Coins
+  *  Colateral: 15.000 ~ 250.000 Coins
   *  Block Reward: 3 ~ 100 Coins
-  *  Reward Masternode: 80% ~ 95% 
-  *  Reward POS - 5% ~ 20%
-  *  Reward Dev Fee: 0.50 ~ 1.50 Coins
+  *  Reward Masternode: 75% ~ 95% 
+  *  Reward POS - 5% ~ 25%
+  *  Reward Dev Fee: 0.50 ~ 5.0 Coins
   *  Port: 49266
   *  rpcPort: 49265
   *  Blocks Rewards 
@@ -25,12 +25,9 @@
   *    30.000  -  70.000  -   9 Coins
   *    70.001  - 150.000  -  50 Coins
   *    150.001 - 225.000  -  35 Coins
-  *    225.001 - 300.000  -  25 Coins
-  *    300.001 - 375.000  -  15 Coins
-  *    375.001 - 378.000  - 100 Coins
-  *    378.001 - 525.000  -  25 Coins
-  *    525.001 - 600.000  -  15 Coins
-  *    600.001 - Infinite -  10 Coins
+  *    225.001 - 230.000  - 100 Coins
+  *    230.001 - 375.000  -  15 Coins
+  *    375.001 - Infinite -  10 Coins
   
 -------
 -------
@@ -45,6 +42,7 @@
 *  https://coinpaprika.com/criptomoeda/msc-master-stake-coin/
 *  Nomics - https://nomics.com/assets/master3-masterstakecoin
 *  Explorer - http://164.68.123.250/
+*  Explorer - http://explorer.masterstake.top
 *  https://masterstake.net/
 
 Donations
