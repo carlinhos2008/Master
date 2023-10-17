@@ -506,7 +506,7 @@ void PrivacyDialog::sendzMASTER()
 
     CAmount nValueOut = 0;
     for (const CTxOut& txout: wtxNew.vout) {
-        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Zcr, ";
+        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Master, ";
         nValueOut += txout.nValue;
 
         strStats += tr("address: ");

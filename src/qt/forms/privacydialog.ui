@@ -270,7 +270,7 @@
                            </size>
                           </property>
                           <property name="toolTip">
-                           <string>Enter an amount of Zcr to convert to zMASTER</string>
+                           <string>Enter an amount of Master to convert to zMASTER</string>
                           </property>
                           <property name="text">
                            <string>Mint Zerocoin</string>
@@ -322,7 +322,7 @@
                            </font>
                           </property>
                           <property name="toolTip">
-                           <string>Enter an amount of Zcr to convert to zMASTER</string>
+                           <string>Enter an amount of Master to convert to zMASTER</string>
                           </property>
                           <property name="text">
                            <string>0.000 000 00 MASTER</string>

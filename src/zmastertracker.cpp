@@ -133,7 +133,7 @@ CAmount CzMASTERTracker::GetBalance(bool fConfirmedOnly, bool fUnconfirmedOnly) 
     }
 
     {
-        //LOCK(cs_zcrtracker);
+        //LOCK(cs_mastertracker);
         // Get Unused coins
         for (auto& it : mapSerialHashes) {
             CMintMeta meta = it.second;

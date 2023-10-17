@@ -127,7 +127,7 @@ public:
 
         nSubsidyHalvingBlock = 1000;
         
-        strDevFeeAddress = "MHrThmoWKXH9qqhVTRmnBXtPks7u2xGABe", "MTPjTgHQGsd3hkkY7rUaxWnXU4yJvHpDFp";
+        strDevFeeAddress = "MHrThmoWKXH9qqhVTRmnBXtPks7u2xGABe";
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;

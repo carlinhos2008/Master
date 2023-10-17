@@ -1,0 +1,26 @@
+# /etc/conf.d/masterstaked: config file for /etc/init.d/masterstaked
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/masterstake/masterstake.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/masterstaked"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/masterstaked.pid"
+
+# Where to write masterstaked data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/masterstaked"
+
+# User and group to own masterstaked process
+#BITCOIND_USER="masterstake"
+#BITCOIND_GROUP="masterstake"
+
+# Path to masterstaked executable
+#BITCOIND_BIN="/usr/bin/masterstaked"
+
+# Nice value to run masterstaked under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

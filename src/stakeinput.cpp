@@ -165,31 +165,31 @@ bool CZMasterStake::MarkSpent(CWallet *pwallet, const uint256& txid)
 }
 
 //!MASTERStake
-bool CZcrStake::SetInput(CTransaction txPrev, unsigned int n)
+bool CMasterStake::SetInput(CTransaction txPrev, unsigned int n)
 {
     this->txFrom = txPrev;
     this->nPosition = n;
     return true;
 }
 
-bool CZcrStake::GetTxFrom(CTransaction& tx)
+bool CMasterStake::GetTxFrom(CTransaction& tx)
 {
     tx = txFrom;
     return true;
 }
 
-bool CZcrStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
+bool CMasterStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
 {
     txIn = CTxIn(txFrom.GetHash(), nPosition);
     return true;
 }
 
-CAmount CZcrStake::GetValue()
+CAmount CMasterStake::GetValue()
 {
     return txFrom.vout[nPosition].nValue;
 }
 
-bool CZcrStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTotal)
+bool CMasterStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTotal)
 {
     vector<valtype> vSolutions;
     txnouttype whichType;
@@ -224,7 +224,7 @@ bool CZcrStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTo
     return true;
 }
 
-bool CZcrStake::GetModifier(uint64_t& nStakeModifier)
+bool CMasterStake::GetModifier(uint64_t& nStakeModifier)
 {
     int nStakeModifierHeight = 0;
     int64_t nStakeModifierTime = 0;
@@ -238,7 +238,7 @@ bool CZcrStake::GetModifier(uint64_t& nStakeModifier)
     return true;
 }
 
-CDataStream CZcrStake::GetUniqueness()
+CDataStream CMasterStake::GetUniqueness()
 {
     //The unique identifier for a MASTERstake is the outpoint
     CDataStream ss(SER_NETWORK, 0);
@@ -247,7 +247,7 @@ CDataStream CZcrStake::GetUniqueness()
 }
 
 //The block that the UTXO was added to the chain
-CBlockIndex* CZcrStake::GetIndexFrom()
+CBlockIndex* CMasterStake::GetIndexFrom()
 {
     uint256 hashBlock = 0;
     CTransaction tx;

@@ -211,7 +211,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     }
     // MASTER Balance
     CAmount nTotalBalance = balance + unconfirmedBalance;
-    CAmount zcrAvailableBalance = balance - immatureBalance - nLockedBalance > 0 ? balance - immatureBalance - nLockedBalance : 0;
+    CAmount masterAvailableBalance = balance - immatureBalance - nLockedBalance > 0 ? balance - immatureBalance - nLockedBalance : 0;
     CAmount nTotalWatchBalance = watchOnlyBalance + watchUnconfBalance + watchImmatureBalance;    
     CAmount nUnlockedBalance = nTotalBalance - nLockedBalance;
 
@@ -222,11 +222,11 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     QString sPercentage = "";
     getPercentage(nUnlockedBalance, zerocoinBalance, sPercentage, szPercentage);
     // Combined balances
-    CAmount availableTotalBalance = zcrAvailableBalance + matureZerocoinBalance;
+    CAmount availableTotalBalance = masterAvailableBalance + matureZerocoinBalance;
     CAmount sumTotalBalance = nTotalBalance + zerocoinBalance;
 
     // MASTER labels
-    ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zcrAvailableBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, masterAvailableBalance, false, BitcoinUnits::separatorAlways));
     ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorAlways));
     ui->labelImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureBalance, false, BitcoinUnits::separatorAlways));
     ui->labelLockedBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nLockedBalance, false, BitcoinUnits::separatorAlways));
@@ -271,7 +271,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     bool showSumAvailable = settingShowAllBalances || sumTotalBalance != availableTotalBalance;
     ui->labelBalanceTextz->setVisible(showSumAvailable);
     ui->labelBalancez->setVisible(showSumAvailable);
-    bool showMASTERAvailable = settingShowAllBalances || zcrAvailableBalance != nTotalBalance;
+    bool showMASTERAvailable = settingShowAllBalances || masterAvailableBalance != nTotalBalance;
     bool showWatchOnlyMASTERAvailable = watchOnlyBalance != nTotalWatchBalance;
     bool showMASTERPending = settingShowAllBalances || unconfirmedBalance != 0;
     bool showWatchOnlyMASTERPending = watchUnconfBalance != 0;
